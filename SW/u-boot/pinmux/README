@@ -1,0 +1,3 @@
+Two commands to run the script:
+am57xx_generate_pin_config_data.pl -p genericFileFormatPadConf.txt -d genericFileFormatIOdelay.txt -o iopad > iopad.txt
+am57xx_generate_pin_config_data.pl -p genericFileFormatPadConf.txt -d genericFileFormatIOdelay.txt -o iodelay > iodelay.txt

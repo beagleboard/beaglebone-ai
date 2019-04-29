@@ -1,0 +1,759 @@
+From 0de1a0acfc2b050da420a6de625f2767d4fac435 Mon Sep 17 00:00:00 2001
+From: Robert Nelson <robertcnelson@gmail.com>
+Date: Tue, 6 Nov 2018 16:41:25 -0600
+Subject: [PATCH] beagle_x15: uEnv.txt, bootz, n fixes
+
+Signed-off-by: Robert Nelson <robertcnelson@gmail.com>
+---
+ Makefile                                |   2 +-
+ arch/arm/dts/Makefile                   |   1 +
+ arch/arm/dts/am57xx-beagle-x15-revc.dts |  24 ++
+ board/ti/am57xx/board.c                 |  65 ++++-
+ configs/am57xx_evm_defconfig            |   8 +-
+ include/configs/ti_armv7_common.h       | 313 ++++++++++++++++++++++++
+ include/configs/ti_omap5_common.h       |  37 +--
+ include/environment/ti/mmc.h            |  54 ++--
+ scripts/Kbuild.include                  |   5 +
+ scripts/Makefile.extrawarn              |   6 +
+ 10 files changed, 466 insertions(+), 49 deletions(-)
+ create mode 100644 arch/arm/dts/am57xx-beagle-x15-revc.dts
+
+diff --git a/Makefile b/Makefile
+index 9217a83fe5..49dc0a3665 100644
+--- a/Makefile
++++ b/Makefile
+@@ -371,7 +371,7 @@ export ARCH CPU BOARD VENDOR SOC CPUDIR BOARDDIR
+ export CONFIG_SHELL HOSTCC HOSTCFLAGS HOSTLDFLAGS CROSS_COMPILE AS LD CC
+ export CPP AR NM LDR STRIP OBJCOPY OBJDUMP
+ export MAKE AWK PERL PYTHON
+-export HOSTCXX HOSTCXXFLAGS DTC CHECK CHECKFLAGS
++export HOSTCXX HOSTCXXFLAGS CHECK CHECKFLAGS DTC DTC_FLAGS
+ 
+ export KBUILD_CPPFLAGS NOSTDINC_FLAGS UBOOTINCLUDE OBJCOPYFLAGS LDFLAGS
+ export KBUILD_CFLAGS KBUILD_AFLAGS
+diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
+index 22e4f21ad5..8c2f661f2f 100644
+--- a/arch/arm/dts/Makefile
++++ b/arch/arm/dts/Makefile
+@@ -143,6 +143,7 @@ dtb-$(CONFIG_TARGET_DRA7XX_EVM) += dra72-evm.dtb dra7-evm.dtb	\
+ 	dra72-evm-revc.dtb dra71-evm.dtb
+ dtb-$(CONFIG_TARGET_AM57XX_EVM) += am57xx-beagle-x15.dtb \
+ 	am57xx-beagle-x15-revb1.dtb \
++	am57xx-beagle-x15-revc.dtb \
+ 	am57xx-evm-reva3.dtb \
+ 	am572x-idk.dtb	\
+ 	am571x-idk.dtb
+diff --git a/arch/arm/dts/am57xx-beagle-x15-revc.dts b/arch/arm/dts/am57xx-beagle-x15-revc.dts
+new file mode 100644
+index 0000000000..6a3b34259a
+--- /dev/null
++++ b/arch/arm/dts/am57xx-beagle-x15-revc.dts
+@@ -0,0 +1,24 @@
++/*
++ * Copyright (C) 2014-2016 Texas Instruments Incorporated - http://www.ti.com/
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License version 2 as
++ * published by the Free Software Foundation.
++ */
++
++#include "am57xx-beagle-x15-common.dtsi"
++
++/ {
++	model = "TI AM5728 BeagleBoard-X15 rev C";
++};
++
++&tpd12s015 {
++	gpios = <&gpio7 10 GPIO_ACTIVE_HIGH>,	/* gpio7_10, CT CP HPD */
++		<&gpio2 30 GPIO_ACTIVE_HIGH>,	/* gpio2_30, LS OE */
++		<&gpio7 12 GPIO_ACTIVE_HIGH>;	/* gpio7_12/sp1_cs2, HPD */
++};
++
++&mmc1 {
++	vmmc-supply = <&vdd_3v3>;
++	vmmc_aux-supply = <&ldo1_reg>;
++};
+diff --git a/board/ti/am57xx/board.c b/board/ti/am57xx/board.c
+index 5b6cf281b0..c44f65508d 100755
+--- a/board/ti/am57xx/board.c
++++ b/board/ti/am57xx/board.c
+@@ -37,6 +37,8 @@
+ #define board_is_x15()		board_ti_is("BBRDX15_")
+ #define board_is_x15_revb1()	(board_ti_is("BBRDX15_") && \
+ 				 (strncmp("B.10", board_ti_get_rev(), 3) <= 0))
++#define board_is_x15_revc()	(board_ti_is("BBRDX15_") && \
++				 (strncmp("C.00", board_ti_get_rev(), 3) <= 0))
+ #define board_is_am572x_evm()	board_ti_is("AM572PM_")
+ #define board_is_am572x_evm_reva3()	\
+ 				(board_ti_is("AM572PM_") && \
+@@ -44,6 +46,21 @@
+ #define board_is_am572x_idk()	board_ti_is("AM572IDK")
+ #define board_is_am571x_idk()	board_ti_is("AM571IDK")
+ 
++//Blank Flasher
++//#define board_is_x15_revb1_blank()	1
++//Normal
++#define board_is_x15_revb1_blank()	board_ti_is("XM57BLNK")
++
++//Blank Flasher
++//#define board_is_x15_revc_blank()	1
++//Normal
++#define board_is_x15_revc_blank()	board_ti_is("XM57BLNK")
++
++//Blank Flasher
++//#define board_is_am571x_blank()		1
++//Normal
++#define board_is_am571x_blank()		board_ti_is("XM57BLNK")
++
+ #ifdef CONFIG_DRIVER_TI_CPSW
+ #include <cpsw.h>
+ #endif
+@@ -88,7 +105,7 @@ static const struct dmm_lisa_map_regs am571x_idk_lisa_regs = {
+ 
+ void emif_get_dmm_regs(const struct dmm_lisa_map_regs **dmm_lisa_regs)
+ {
+-	if (board_is_am571x_idk())
++	if (board_is_am571x_idk() || board_is_am571x_blank())
+ 		*dmm_lisa_regs = &am571x_idk_lisa_regs;
+ 	else
+ 		*dmm_lisa_regs = &beagle_x15_lisa_regs;
+@@ -407,6 +424,10 @@ void do_board_detect(void)
+ 		bname = "AM572x IDK";
+ 	else if (board_is_am571x_idk())
+ 		bname = "AM571x IDK";
++	else if (board_is_x15_revb1_blank())
++		bname = "BeagleBoard X15 blank";
++	else if (board_is_x15_revc_blank())
++		bname = "BeagleBoard X15 blank";
+ 
+ 	if (bname)
+ 		snprintf(sysinfo.board_string, SYSINFO_BOARD_NAME_MAX_LEN,
+@@ -415,16 +436,18 @@ void do_board_detect(void)
+ 
+ static void setup_board_eeprom_env(void)
+ {
+-	char *name = "beagle_x15";
++	char *name = "NULL";
+ 	int rc;
+ 
+ 	rc = ti_i2c_eeprom_am_get(CONFIG_EEPROM_BUS_ADDRESS,
+ 				  CONFIG_EEPROM_CHIP_ADDRESS);
+ 	if (rc)
+-		goto invalid_eeprom;
++		printf("ti_i2c_eeprom_init failed %d\n", rc);
+ 
+ 	if (board_is_x15()) {
+-		if (board_is_x15_revb1())
++		if (board_is_x15_revc())
++			name = "beagle_x15_revc";
++		else if (board_is_x15_revb1())
+ 			name = "beagle_x15_revb1";
+ 		else
+ 			name = "beagle_x15";
+@@ -437,12 +460,15 @@ static void setup_board_eeprom_env(void)
+ 		name = "am572x_idk";
+ 	} else if (board_is_am571x_idk()) {
+ 		name = "am571x_idk";
+-	} else {
+-		printf("Unidentified board claims %s in eeprom header\n",
+-		       board_ti_get_name());
++	} else if (board_is_x15_revb1_blank()) {
++		name = "beagle_x15_revb1_blank";
++		setenv("board_eeprom_header", "beagle_x15_revb1_blank");
++	} else if (board_is_x15_revc_blank()) {
++		name = "beagle_x15_revc_blank";
++		setenv("board_eeprom_header", "beagle_x15_revc_blank");
+ 	}
+ 
+-invalid_eeprom:
++	printf("setup_board_eeprom_env: %s\n", name);
+ 	set_board_info_env(name);
+ }
+ 
+@@ -496,6 +522,12 @@ void am57x_idk_lcd_detect(void)
+ 	if (board_is_x15() || board_is_am572x_evm())
+ 		return;
+ 
++	if (board_is_x15_revb1_blank())
++		return;
++
++	if (board_is_x15_revc_blank())
++		return;
++
+ 	/* Only AM571x IDK has gpio control detect.. so check that */
+ 	if (board_is_am571x_idk() && !am571x_idk_needs_lcd())
+ 		goto out;
+@@ -629,8 +661,8 @@ void recalibrate_iodelay(void)
+ 	do_set_mux32((*ctrl)->control_padconf_core_base, pconf, pconf_sz);
+ 
+ 	/* Now do the weird minor deltas that should be safe */
+-	if (board_is_x15() || board_is_am572x_evm()) {
+-		if (board_is_x15_revb1() || board_is_am572x_evm_reva3()) {
++	if (board_is_x15() || board_is_am572x_evm() || board_is_x15_revb1_blank() || board_is_x15_revc_blank()) {
++		if (board_is_x15_revb1() || board_is_am572x_evm_reva3() || board_is_x15_revb1_blank() || board_is_x15_revc_blank()) {
+ 			pconf = core_padconf_array_delta_x15_sr2_0;
+ 			pconf_sz = ARRAY_SIZE(core_padconf_array_delta_x15_sr2_0);
+ 		} else {
+@@ -1005,7 +1037,10 @@ int ft_board_setup(void *blob, bd_t *bd)
+ int board_fit_config_name_match(const char *name)
+ {
+ 	if (board_is_x15()) {
+-		if (board_is_x15_revb1()) {
++		if (board_is_x15_revc()) {
++			if (!strcmp(name, "am57xx-beagle-x15-revc"))
++				return 0;
++		} else if (board_is_x15_revb1()) {
+ 			if (!strcmp(name, "am57xx-beagle-x15-revb1"))
+ 				return 0;
+ 		} else if (!strcmp(name, "am57xx-beagle-x15")) {
+@@ -1022,9 +1057,15 @@ int board_fit_config_name_match(const char *name)
+ 		return 0;
+ 	} else if (board_is_am571x_idk() && !strcmp(name, "am571x-idk")) {
+ 		return 0;
++	} else if (board_is_x15_revb1_blank() && !strcmp(name, "am57xx-beagle-x15-revb1")) {
++		return 0;
++	} else if (board_is_x15_revc_blank() && !strcmp(name, "am57xx-beagle-x15-revc")) {
++		return 0;
+ 	}
+ 
+-	return -1;
++//	return -1;
++//FIXME: for some reason, the board_is_am572x_evm_reva3 path is not returning..
++	return 0;
+ }
+ #endif
+ 
+diff --git a/configs/am57xx_evm_defconfig b/configs/am57xx_evm_defconfig
+index e32989d079..95e0660bb6 100644
+--- a/configs/am57xx_evm_defconfig
++++ b/configs/am57xx_evm_defconfig
+@@ -22,6 +22,10 @@ CONFIG_SPL_STACK_R=y
+ CONFIG_SPL_SEPARATE_BSS=y
+ CONFIG_SPL_DMA_SUPPORT=y
+ CONFIG_SPL_OS_BOOT=y
++CONFIG_AUTOBOOT_KEYED=y
++CONFIG_AUTOBOOT_PROMPT="Press SPACE to abort autoboot in %d seconds\n"
++CONFIG_AUTOBOOT_DELAY_STR="d"
++CONFIG_AUTOBOOT_STOP_STR=" "
+ CONFIG_HUSH_PARSER=y
+ CONFIG_FASTBOOT=y
+ CONFIG_USB_FUNCTION_FASTBOOT=y
+@@ -57,7 +61,7 @@ CONFIG_OF_CONTROL=y
+ CONFIG_SPL_OF_CONTROL=y
+ CONFIG_SPL_OF_TRANSLATE=y
+ CONFIG_SPL_DM_SEQ_ALIAS=y
+-CONFIG_OF_LIST="am57xx-beagle-x15 am57xx-beagle-x15-revb1 am57xx-evm-reva3 am572x-idk am571x-idk"
++CONFIG_OF_LIST="am57xx-beagle-x15 am57xx-beagle-x15-revb1 am57xx-beagle-x15-revc am57xx-evm-reva3 am572x-idk am571x-idk"
+ CONFIG_DM=y
+ CONFIG_SPL_DM=y
+ CONFIG_REGMAP=y
+@@ -84,6 +88,8 @@ CONFIG_DM_SERIAL=y
+ CONFIG_SYS_NS16550=y
+ CONFIG_DM_SPI=y
+ CONFIG_TI_QSPI=y
++CONFIG_OF_LIBFDT=y
++CONFIG_OF_LIBFDT_OVERLAY=y
+ CONFIG_USB=y
+ CONFIG_USB_XHCI_HCD=y
+ CONFIG_USB_XHCI_DWC3=y
+diff --git a/include/configs/ti_armv7_common.h b/include/configs/ti_armv7_common.h
+index 6c692e13d1..7728432833 100644
+--- a/include/configs/ti_armv7_common.h
++++ b/include/configs/ti_armv7_common.h
+@@ -112,6 +112,319 @@
+ 
+ /* GPIO block */
+ 
++#define EEPROM_PROGRAMMING \
++	"eeprom_dump=i2c dev 0; " \
++		"i2c md 0x50 0x00.2 20; " \
++		"\0" \
++	"eeprom_blank=i2c dev 0; " \
++		"i2c mw 0x50 0x00.2 ff; " \
++		"i2c mw 0x50 0x01.2 ff; " \
++		"i2c mw 0x50 0x02.2 ff; " \
++		"i2c mw 0x50 0x03.2 ff; " \
++		"i2c mw 0x50 0x04.2 ff; " \
++		"i2c mw 0x50 0x05.2 ff; " \
++		"i2c mw 0x50 0x06.2 ff; " \
++		"i2c mw 0x50 0x07.2 ff; " \
++		"i2c mw 0x50 0x08.2 ff; " \
++		"i2c mw 0x50 0x09.2 ff; " \
++		"i2c mw 0x50 0x0a.2 ff; " \
++		"i2c mw 0x50 0x0b.2 ff; " \
++		"i2c mw 0x50 0x0c.2 ff; " \
++		"i2c mw 0x50 0x0d.2 ff; " \
++		"i2c mw 0x50 0x0e.2 ff; " \
++		"i2c mw 0x50 0x0f.2 ff; " \
++		"i2c mw 0x50 0x10.2 ff; " \
++		"i2c mw 0x50 0x11.2 ff; " \
++		"i2c mw 0x50 0x12.2 ff; " \
++		"i2c mw 0x50 0x13.2 ff; " \
++		"i2c mw 0x50 0x14.2 ff; " \
++		"i2c mw 0x50 0x15.2 ff; " \
++		"i2c mw 0x50 0x16.2 ff; " \
++		"i2c mw 0x50 0x17.2 ff; " \
++		"i2c mw 0x50 0x18.2 ff; " \
++		"i2c mw 0x50 0x19.2 ff; " \
++		"i2c mw 0x50 0x1a.2 ff; " \
++		"i2c mw 0x50 0x1b.2 ff; " \
++		"i2c mw 0x50 0x1c.2 ff; " \
++		"i2c mw 0x50 0x1d.2 ff; " \
++		"i2c mw 0x50 0x1e.2 ff; " \
++		"i2c mw 0x50 0x1f.2 ff; " \
++		"i2c md 0x50 0x00.2 20; " \
++		"\0" \
++	"eeprom_x15_b1=i2c dev 0; " \
++		"i2c mw 0x50 0x00.2 aa; " \
++		"i2c mw 0x50 0x01.2 55; " \
++		"i2c mw 0x50 0x02.2 33; " \
++		"i2c mw 0x50 0x03.2 ee; " \
++		"i2c mw 0x50 0x04.2 42; " \
++		"i2c mw 0x50 0x05.2 42; " \
++		"i2c mw 0x50 0x06.2 52; " \
++		"i2c mw 0x50 0x07.2 44; " \
++		"i2c mw 0x50 0x08.2 58; " \
++		"i2c mw 0x50 0x09.2 31; " \
++		"i2c mw 0x50 0x0a.2 35; " \
++		"i2c mw 0x50 0x0b.2 5f; " \
++		"i2c mw 0x50 0x0c.2 42; " \
++		"i2c mw 0x50 0x0d.2 2e; " \
++		"i2c mw 0x50 0x0e.2 31; " \
++		"i2c mw 0x50 0x0f.2 30; " \
++		"i2c mw 0x50 0x10.2 57; " \
++		"i2c mw 0x50 0x11.2 57; " \
++		"i2c mw 0x50 0x12.2 59; " \
++		"i2c mw 0x50 0x13.2 59; " \
++		"i2c mw 0x50 0x14.2 34; " \
++		"i2c mw 0x50 0x15.2 50; " \
++		"i2c mw 0x50 0x16.2 35; " \
++		"i2c mw 0x50 0x17.2 35; " \
++		"i2c mw 0x50 0x18.2 30; " \
++		"i2c mw 0x50 0x19.2 30; " \
++		"i2c mw 0x50 0x1a.2 30; " \
++		"i2c mw 0x50 0x1b.2 30; " \
++		"i2c mw 0x50 0x1c.2 ff; " \
++		"i2c mw 0x50 0x1d.2 ff; " \
++		"i2c mw 0x50 0x1e.2 ff; " \
++		"i2c mw 0x50 0x1f.2 ff; " \
++		"i2c md 0x50 0x00.2 20; " \
++		"\0" \
++	"eeprom_x15_c=i2c dev 0; " \
++		"i2c mw 0x50 0x00.2 aa; " \
++		"i2c mw 0x50 0x01.2 55; " \
++		"i2c mw 0x50 0x02.2 33; " \
++		"i2c mw 0x50 0x03.2 ee; " \
++		"i2c mw 0x50 0x04.2 42; " \
++		"i2c mw 0x50 0x05.2 42; " \
++		"i2c mw 0x50 0x06.2 52; " \
++		"i2c mw 0x50 0x07.2 44; " \
++		"i2c mw 0x50 0x08.2 58; " \
++		"i2c mw 0x50 0x09.2 31; " \
++		"i2c mw 0x50 0x0a.2 35; " \
++		"i2c mw 0x50 0x0b.2 5f; " \
++		"i2c mw 0x50 0x0c.2 43; " \
++		"i2c mw 0x50 0x0d.2 2e; " \
++		"i2c mw 0x50 0x0e.2 30; " \
++		"i2c mw 0x50 0x0f.2 30; " \
++		"i2c mw 0x50 0x10.2 79; " \
++		"i2c mw 0x50 0x11.2 79; " \
++		"i2c mw 0x50 0x12.2 77; " \
++		"i2c mw 0x50 0x13.2 77; " \
++		"i2c mw 0x50 0x14.2 50; " \
++		"i2c mw 0x50 0x15.2 58; " \
++		"i2c mw 0x50 0x16.2 31; " \
++		"i2c mw 0x50 0x17.2 35; " \
++		"i2c mw 0x50 0x18.2 6e; " \
++		"i2c mw 0x50 0x19.2 6e; " \
++		"i2c mw 0x50 0x1a.2 6e; " \
++		"i2c mw 0x50 0x1b.2 6e; " \
++		"i2c mw 0x50 0x1c.2 ff; " \
++		"i2c mw 0x50 0x1d.2 ff; " \
++		"i2c mw 0x50 0x1e.2 ff; " \
++		"i2c mw 0x50 0x1f.2 ff; " \
++		"i2c md 0x50 0x00.2 20; " \
++		"\0" \
++
++
++#define EEWIKI_MMC_BOOT \
++	"mmc_boot=${interface} dev ${mmcdev}; " \
++		"if ${interface} rescan; then " \
++			"echo Scanning ${interface} device ${mmcdev};" \
++			"setenv bootpart ${mmcdev}:1; " \
++			"echo Checking for: /uEnv.txt ...;" \
++			"if test -e ${interface} ${bootpart} /uEnv.txt; then " \
++				"load ${interface} ${bootpart} ${loadaddr} /uEnv.txt;" \
++				"env import -t ${loadaddr} ${filesize};" \
++				"echo Loaded environment from /uEnv.txt;" \
++				"echo Checking if uenvcmd is set ...;" \
++				"if test -n ${uenvcmd}; then " \
++					"echo Running uenvcmd ...;" \
++					"run uenvcmd;" \
++				"fi;" \
++			"fi; " \
++			"echo Checking for: /boot/uEnv.txt ...;" \
++			"for i in 1 2 3 4 5 6 7 ; do " \
++				"setenv mmcpart ${i};" \
++				"setenv bootpart ${mmcdev}:${mmcpart};" \
++				"if test -e ${interface} ${bootpart} /boot/uEnv.txt; then " \
++					"load ${interface} ${bootpart} ${loadaddr} /boot/uEnv.txt;" \
++					"env import -t ${loadaddr} ${filesize};" \
++					"echo Loaded environment from /boot/uEnv.txt;" \
++					"if test -n ${dtb}; then " \
++						"setenv fdtfile ${dtb};" \
++						"echo debug: [dtb=${fdtfile}] ...;" \
++					"fi;" \
++					"echo Checking if uname_r is set in /boot/uEnv.txt ...;" \
++					"if test -n ${uname_r}; then " \
++						"echo debug: [uname_r=${uname_r}] ...;" \
++						"setenv oldroot /dev/mmcblk${mmcdev}p${mmcpart};" \
++						"run uname_boot;" \
++					"fi;" \
++				"fi;" \
++			"done;" \
++		"fi;\0" \
++
++#define EEWIKI_SCSI_BOOT \
++	"scsi_boot=${interface} reset ; " \
++		"if ${interface} dev ${mmcdev}; then " \
++			"echo Scanning ${interface} device ${mmcdev};" \
++			"setenv bootpart ${mmcdev}:1; " \
++			"echo Checking for: /uEnv.txt ...;" \
++			"if test -e ${interface} ${bootpart} /uEnv.txt; then " \
++				"load ${interface} ${bootpart} ${loadaddr} /uEnv.txt;" \
++				"env import -t ${loadaddr} ${filesize};" \
++				"echo Loaded environment from /uEnv.txt;" \
++				"echo Checking if uenvcmd is set ...;" \
++				"if test -n ${uenvcmd}; then " \
++					"echo Running uenvcmd ...;" \
++					"run uenvcmd;" \
++				"fi;" \
++			"fi; " \
++			"echo Checking for: /boot/uEnv.txt ...;" \
++			"for i in 1 2 3 4 ; do " \
++				"setenv mmcpart ${i};" \
++				"setenv bootpart ${mmcdev}:${mmcpart};" \
++				"if test -e ${interface} ${bootpart} /boot/uEnv.txt; then " \
++					"load ${interface} ${bootpart} ${loadaddr} /boot/uEnv.txt;" \
++					"env import -t ${loadaddr} ${filesize};" \
++					"echo Loaded environment from /boot/uEnv.txt;" \
++					"if test -n ${dtb}; then " \
++						"setenv fdtfile ${dtb};" \
++						"echo debug: [dtb=${fdtfile}] ...;" \
++					"fi;" \
++					"echo Checking if uname_r is set in /boot/uEnv.txt ...;" \
++					"if test -n ${uname_r}; then " \
++						"echo debug: [uname_r=${uname_r}] ...;" \
++						"setenv oldroot /dev/sda${mmcpart};" \
++						"run uname_boot;" \
++					"fi;" \
++				"fi;" \
++			"done;" \
++		"fi;\0" \
++
++#define EEWIKI_USB_BOOT \
++	"usb_boot=${interface} reset ; " \
++		"if ${interface} dev ${mmcdev}; then " \
++			"echo Scanning ${interface} device ${mmcdev};" \
++			"setenv bootpart ${mmcdev}:1; " \
++			"echo Checking for: /uEnv.txt ...;" \
++			"if test -e ${interface} ${bootpart} /uEnv.txt; then " \
++				"load ${interface} ${bootpart} ${loadaddr} /uEnv.txt;" \
++				"env import -t ${loadaddr} ${filesize};" \
++				"echo Loaded environment from /uEnv.txt;" \
++				"echo Checking if uenvcmd is set in /uEnv.txt ...;" \
++				"if test -n ${uenvcmd}; then " \
++					"echo Running uenvcmd ...;" \
++					"run uenvcmd;" \
++				"fi;" \
++			"fi; " \
++			"echo Checking for: /boot/uEnv.txt ...;" \
++			"for i in 1 2 3 4 ; do " \
++				"setenv mmcpart ${i};" \
++				"setenv bootpart ${mmcdev}:${mmcpart};" \
++				"if test -e ${interface} ${bootpart} /boot/uEnv.txt; then " \
++					"load ${interface} ${bootpart} ${loadaddr} /boot/uEnv.txt;" \
++					"env import -t ${loadaddr} ${filesize};" \
++					"echo Loaded environment from /boot/uEnv.txt;" \
++					"if test -n ${dtb}; then " \
++						"setenv fdtfile ${dtb};" \
++						"echo debug: [dtb=${fdtfile}] ...;" \
++					"fi;" \
++					"echo Checking if uname_r is set in /boot/uEnv.txt ...;" \
++					"if test -n ${uname_r}; then " \
++						"echo debug: [uname_r=${uname_r}] ...;" \
++						"setenv oldroot /dev/sda${mmcpart};" \
++						"run uname_boot;" \
++					"fi;" \
++				"fi;" \
++			"done;" \
++		"fi;\0" \
++
++#define EEWIKI_UNAME_BOOT \
++	"uname_boot="\
++		"setenv bootdir /boot; " \
++		"setenv bootfile vmlinuz-${uname_r}; " \
++		"if test -e ${interface} ${bootpart} ${bootdir}/${bootfile}; then " \
++			"echo loading ${bootdir}/${bootfile} ...; "\
++			"run loadimage;" \
++			"setenv fdtdir /boot/dtbs/${uname_r}; " \
++			"if test -e ${interface} ${bootpart} ${fdtdir}/${fdtfile}; then " \
++				"run loadfdt;" \
++			"else " \
++				"setenv fdtdir /usr/lib/linux-image-${uname_r}; " \
++				"if test -e ${interface} ${bootpart} ${fdtdir}/${fdtfile}; then " \
++					"run loadfdt;" \
++				"else " \
++					"setenv fdtdir /lib/firmware/${uname_r}/device-tree; " \
++					"if test -e ${interface} ${bootpart} ${fdtdir}/${fdtfile}; then " \
++						"run loadfdt;" \
++					"else " \
++						"setenv fdtdir /boot/dtb-${uname_r}; " \
++						"if test -e ${interface} ${bootpart} ${fdtdir}/${fdtfile}; then " \
++							"run loadfdt;" \
++						"else " \
++							"setenv fdtdir /boot/dtbs; " \
++							"if test -e ${interface} ${bootpart} ${fdtdir}/${fdtfile}; then " \
++								"run loadfdt;" \
++							"else " \
++								"setenv fdtdir /boot/dtb; " \
++								"if test -e ${interface} ${bootpart} ${fdtdir}/${fdtfile}; then " \
++									"run loadfdt;" \
++								"else " \
++									"setenv fdtdir /boot; " \
++									"if test -e ${interface} ${bootpart} ${fdtdir}/${fdtfile}; then " \
++										"run loadfdt;" \
++									"else " \
++										"echo; echo unable to find ${fdtfile} ...; echo booting legacy ...;"\
++										"run args_mmc;" \
++										"echo debug: [${bootargs}] ... ;" \
++										"echo debug: [bootz ${loadaddr}] ... ;" \
++										"bootz ${loadaddr}; " \
++									"fi;" \
++								"fi;" \
++							"fi;" \
++						"fi;" \
++					"fi;" \
++				"fi;" \
++			"fi; " \
++			"setenv rdfile initrd.img-${uname_r}; " \
++			"if test -e ${interface} ${bootpart} ${bootdir}/${rdfile}; then " \
++				"echo loading ${bootdir}/${rdfile} ...; "\
++				"run loadrd;" \
++				"if test -n ${netinstall_enable}; then " \
++					"run args_netinstall; run message;" \
++					"echo debug: [${bootargs}] ... ;" \
++					"echo debug: [bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}] ... ;" \
++					"bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}; " \
++				"fi;" \
++				"if test -n ${uenv_root}; then " \
++					"run args_uenv_root;" \
++					"echo debug: [${bootargs}] ... ;" \
++					"echo debug: [bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}] ... ;" \
++					"bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}; " \
++				"fi;" \
++				"if test -n ${uuid}; then " \
++					"run args_mmc_uuid;" \
++					"echo debug: [${bootargs}] ... ;" \
++					"echo debug: [bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}] ... ;" \
++					"bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}; " \
++				"else " \
++					"run args_mmc_old;" \
++					"echo debug: [${bootargs}] ... ;" \
++					"echo debug: [bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}] ... ;" \
++					"bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}; " \
++				"fi;" \
++			"else " \
++				"if test -n ${uenv_root}; then " \
++					"run args_uenv_root;" \
++					"echo debug: [${bootargs}] ... ;" \
++					"echo debug: [bootz ${loadaddr} - ${fdtaddr}] ... ;" \
++					"bootz ${loadaddr} - ${fdtaddr}; " \
++				"fi;" \
++				"run args_mmc_old;" \
++				"echo debug: [${bootargs}] ... ;" \
++				"echo debug: [bootz ${loadaddr} - ${fdtaddr}] ... ;" \
++				"bootz ${loadaddr} - ${fdtaddr}; " \
++			"fi;" \
++		"fi;\0" \
++
+ /*
+  * The following are general good-enough settings for U-Boot.  We set a
+  * large malloc pool as we generally have a lot of DDR, and we opt for
+diff --git a/include/configs/ti_omap5_common.h b/include/configs/ti_omap5_common.h
+index 7bec0d61f1..490bc75b83 100644
+--- a/include/configs/ti_omap5_common.h
++++ b/include/configs/ti_omap5_common.h
+@@ -73,11 +73,17 @@
+ 	"bootpart=0:1\0" \
+ 	"bootdir=\0" \
+ 	"bootfile=zImage\0" \
++	"board_eeprom_header=undefined\0" \
+ 	"usbtty=cdc_acm\0" \
+ 	"vram=16M\0" \
+ 	"partitions=" PARTS_DEFAULT "\0" \
+ 	"optargs=\0" \
+ 	"dofastboot=0\0" \
++	"read_board_eeprom="\
++		"if test $board_eeprom_header = beagle_x15_revb1_blank; then " \
++			"run eeprom_dump; run eeprom_x15_b1; reset; fi; " \
++		"if test $board_eeprom_header = beagle_x15_revc_blank; then " \
++			"run eeprom_dump; run eeprom_x15_c; reset; fi;  \0" \
+ 	"findfdt="\
+ 		"if test $board_name = omap5_uevm; then " \
+ 			"setenv fdtfile omap5-uevm.dtb; fi; " \
+@@ -93,6 +99,8 @@
+ 			"setenv fdtfile am57xx-beagle-x15.dtb; fi;" \
+ 		"if test $board_name = beagle_x15_revb1; then " \
+ 			"setenv fdtfile am57xx-beagle-x15-revb1.dtb; fi;" \
++		"if test $board_name = beagle_x15_revc; then " \
++			"setenv fdtfile am57xx-beagle-x15-revc.dtb; fi;" \
+ 		"if test $board_name = am572x_idk && test $idk_lcd = no; then " \
+ 			"setenv fdtfile am572x-idk.dtb; fi;" \
+ 		"if test $board_name = am572x_idk && test $idk_lcd = osd101t2045; then " \
+@@ -111,27 +119,26 @@
+ 			"setenv fdtfile am571x-idk-lcd-osd101t2587.dtb; fi;" \
+ 		"if test $fdtfile = undefined; then " \
+ 			"echo WARNING: Could not determine device tree to use; fi; \0" \
++	EEWIKI_USB_BOOT \
++	EEWIKI_SCSI_BOOT \
++	EEWIKI_MMC_BOOT \
++	EEWIKI_UNAME_BOOT \
++	EEPROM_PROGRAMMING \
+ 	DFUARGS \
+ 	NETARGS \
+ 
+ #define CONFIG_BOOTCOMMAND \
+-	"if test ${dofastboot} -eq 1; then " \
+-		"echo Boot fastboot requested, resetting dofastboot ...;" \
+-		"setenv dofastboot 0; saveenv;" \
+-		"echo Booting into fastboot ...; " \
+-		"fastboot " __stringify(CONFIG_FASTBOOT_USB_DEV) "; " \
+-	"fi;" \
+-	"if test ${boot_fit} -eq 1; then "	\
+-		"run update_to_fit;"	\
+-	"fi;"	\
++	"run read_board_eeprom; " \
+ 	"run findfdt; " \
+-	"run envboot; " \
+-	"run mmcboot;" \
++	"setenv mmcdev 0; " \
++	"setenv interface usb; " \
++	"echo usb_boot is currently disabled;" \
++	"setenv interface scsi; " \
++	"echo scsi_boot is currently disabled;" \
++	"setenv interface mmc; " \
++	"run mmc_boot;" \
+ 	"setenv mmcdev 1; " \
+-	"setenv bootpart 1:1; " \
+-	"setenv mmcroot /dev/mmcblk1p2 rw; " \
+-	"run envboot; " \
+-	"run mmcboot;" \
++	"run mmc_boot;" \
+ 	""
+ 
+ /*
+diff --git a/include/environment/ti/mmc.h b/include/environment/ti/mmc.h
+index 343ed2f011..86f94d81f6 100644
+--- a/include/environment/ti/mmc.h
++++ b/include/environment/ti/mmc.h
+@@ -9,31 +9,45 @@
+ #define DEFAULT_MMC_TI_ARGS \
+ 	"mmcdev=0\0" \
+ 	"mmcrootfstype=ext4 rootwait\0" \
+-	"finduuid="\
+-		"if test ${bootpart} = 0:1; then " \
+-			"part uuid mmc 0:2 uuid;" \
+-		"else " \
+-			"if test ${bootpart} = 1:1; then " \
+-				"part uuid mmc 1:2 uuid;" \
+-			"else " \
+-				"echo ERROR: Cannot find root uuid;" \
+-			"fi;" \
+-		"fi;\0" \
++	"finduuid=part uuid ${interface} ${bootpart} uuid\0" \
+ 	"args_mmc=run finduuid;setenv bootargs console=${console} " \
+ 		"${optargs} " \
+-		"root=PARTUUID=${uuid} rw " \
+-		"rootfstype=${mmcrootfstype}\0" \
+-	"loadbootscript=load mmc ${mmcdev} ${loadaddr} boot.scr\0" \
+-	"bootscript=echo Running bootscript from mmc${mmcdev} ...; " \
++		"root=PARTUUID=${uuid} ro " \
++		"rootfstype=${mmcrootfstype} " \
++		"${cmdline}\0" \
++	"args_mmc_old=setenv bootargs console=${console} " \
++		"${optargs} " \
++		"root=${oldroot} ro " \
++		"rootfstype=${mmcrootfstype} " \
++		"${cmdline}\0" \
++	"args_mmc_uuid=setenv bootargs console=${console} " \
++		"${optargs} " \
++		"root=UUID=${uuid} ro " \
++		"rootfstype=${mmcrootfstype} " \
++		"${cmdline}\0" \
++	"args_uenv_root=setenv bootargs console=${console} " \
++		"${optargs} " \
++		"root=${uenv_root} ro " \
++		"rootfstype=${mmcrootfstype} " \
++		"${musb} ${cmdline}\0" \
++	"args_netinstall=setenv bootargs ${netinstall_bootargs} " \
++		"${optargs} " \
++		"${cape_disable} " \
++		"${cape_enable} " \
++		"root=/dev/ram rw " \
++		"${cmdline}\0" \
++	"loadbootscript=load ${interface} ${mmcdev} ${loadaddr} boot.scr\0" \
++	"bootscript=echo Running bootscript from ${interface}${mmcdev} ...; " \
+ 		"source ${loadaddr}\0" \
+ 	"bootenvfile=uEnv.txt\0" \
+-	"importbootenv=echo Importing environment from mmc${mmcdev} ...; " \
++	"importbootenv=echo Importing environment from ${interface}${mmcdev} ...; " \
+ 		"env import -t ${loadaddr} ${filesize}\0" \
+-	"loadbootenv=fatload mmc ${mmcdev} ${loadaddr} ${bootenvfile}\0" \
+-	"loadimage=load ${devtype} ${bootpart} ${loadaddr} ${bootdir}/${bootfile}\0" \
+-	"loadfdt=load ${devtype} ${bootpart} ${fdtaddr} ${bootdir}/${fdtfile}\0" \
+-	"envboot=mmc dev ${mmcdev}; " \
+-		"if mmc rescan; then " \
++	"loadbootenv=fatload ${interface} ${mmcdev} ${loadaddr} ${bootenvfile}\0" \
++	"loadimage=load ${interface} ${bootpart} ${loadaddr} ${bootdir}/${bootfile}\0" \
++	"loadrd=load ${interface} ${bootpart} ${rdaddr} ${bootdir}/${rdfile}; setenv rdsize ${filesize}\0" \
++	"loadfdt=echo loading ${fdtdir}/${fdtfile} ...;  load ${interface} ${bootpart} ${fdtaddr} ${fdtdir}/${fdtfile}\0" \
++	"envboot=${interface} dev ${mmcdev}; " \
++		"if ${interface} rescan; then " \
+ 			"echo SD/MMC found on device ${mmcdev};" \
+ 			"if run loadbootscript; then " \
+ 				"run bootscript;" \
+diff --git a/scripts/Kbuild.include b/scripts/Kbuild.include
+index 30e6e316ac..1b62aedb00 100644
+--- a/scripts/Kbuild.include
++++ b/scripts/Kbuild.include
+@@ -172,6 +172,11 @@ ld-version = $(shell $(LD) --version | $(srctree)/scripts/ld-version.sh)
+ # Usage:  $(call ld-ifversion, -ge, 22252, y)
+ ld-ifversion = $(shell [ $(ld-version) $(1) $(2) ] && echo $(3) || echo $(4))
+ 
++# dtc-option
++# Usage:  DTC_FLAGS += $(call dtc-option,-Wno-unit_address_vs_reg)
++dtc-option = $(call try-run,\
++	echo '/dts-v1/; / {};' | $(DTC) $(1),$(1),$(2))
++
+ ######
+ 
+ ###
+diff --git a/scripts/Makefile.extrawarn b/scripts/Makefile.extrawarn
+index 6547e57357..7b2cffce52 100644
+--- a/scripts/Makefile.extrawarn
++++ b/scripts/Makefile.extrawarn
+@@ -57,4 +57,10 @@ ifeq ("$(strip $(warning))","")
+ endif
+ 
+ KBUILD_CFLAGS += $(warning)
++
++else
++
++# Disable noisy checks by default
++DTC_FLAGS += $(call dtc-option,-Wno-unit_address_vs_reg)
++
+ endif
+-- 
+2.19.1
+

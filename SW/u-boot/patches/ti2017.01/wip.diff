@@ -1,0 +1,110 @@
+diff --git a/board/embest/som_am572x/board.c b/board/embest/som_am572x/board.c
+index 5eddb7e540..5bf19aca0d 100644
+--- a/board/embest/som_am572x/board.c
++++ b/board/embest/som_am572x/board.c
+@@ -446,6 +446,8 @@ static void setup_board_eeprom_env(void)
+ 		       board_ti_get_name());
+ 	}
+ 
++	set_board_info_env(name);
++
+ invalid_eeprom:
+ 	set_board_info_env(name);
+ }
+@@ -638,8 +640,11 @@ void recalibrate_iodelay(void)
+ 			pconf = core_padconf_array_delta_x15_sr2_0;
+ 			pconf_sz = ARRAY_SIZE(core_padconf_array_delta_x15_sr2_0);
+ 		} else {
+-			pconf = core_padconf_array_delta_x15_sr1_1;
+-			pconf_sz = ARRAY_SIZE(core_padconf_array_delta_x15_sr1_1);
++			//FIXME: SR2 on hamster (no eeprom yet)
++			pconf = core_padconf_array_delta_x15_sr2_0;
++			pconf_sz = ARRAY_SIZE(core_padconf_array_delta_x15_sr2_0);
++			//pconf = core_padconf_array_delta_x15_sr1_1;
++			//pconf_sz = ARRAY_SIZE(core_padconf_array_delta_x15_sr1_1);
+ 		}
+ 		do_set_mux32((*ctrl)->control_padconf_core_base, pconf, pconf_sz);
+ 	}
+diff --git a/board/embest/som_am572x/mux_data.h b/board/embest/som_am572x/mux_data.h
+index 5b14d23e7f..5e8b0dea39 100644
+--- a/board/embest/som_am572x/mux_data.h
++++ b/board/embest/som_am572x/mux_data.h
+@@ -78,7 +78,9 @@ const struct pad_conf_entry core_padconf_array_essential_x15[] = {
+ //	{VIN1A_D11, (M14 | PIN_INPUT_PULLDOWN)},	/* vin1a_d11.gpio3_15 */
+ //	{VIN1A_D13, (M14 | PIN_INPUT_PULLDOWN)},	/* vin1a_d12.gpio3_17 */
+ //	{VIN1A_D14, (M14 | PIN_INPUT_PULLDOWN)},	/* vin1a_d14.gpio3_18 */
++	{VIN1A_D14, (M14 | PIN_OUTPUT_PULLUP)},		/* vin1a_d14.gpio3_18 */ /* RCNEE:WL-REG-ON */
+ //	{VIN1A_D16, (M14 | PIN_INPUT_PULLDOWN)},	/* vin1a_d16.gpio3_20 */
++	{VIN1A_D18, (M14 | PIN_OUTPUT_PULLUP)},		/* vin1a_d18.gpio3_22 */ /* RCNEE:BT-REG-ON */
+ //	{VIN1A_D19, (M14 | PIN_INPUT_PULLDOWN)},	/* vin1a_d19.gpio3_23 */
+ //	{VIN1A_D20, (M14 | PIN_INPUT_PULLDOWN)},	/* vin1a_d20.gpio3_24 */
+ //	{VIN1A_D22, (M14 | PIN_INPUT_PULLDOWN)},	/* vin1a_d22.gpio3_26 */
+@@ -204,11 +206,17 @@ const struct pad_conf_entry core_padconf_array_essential_x15[] = {
+ 	{UART1_RXD, (M0 | PIN_INPUT_PULLUP | SLEWCONTROL)},	/* uart1_rxd.uart1_rxd */
+ 	{UART1_TXD, (M0 | PIN_OUTPUT | SLEWCONTROL)},	/* uart1_txd.uart1_txd */
+ //	{UART1_CTSN, (M14 | PIN_INPUT_PULLDOWN)},	/* uart1_ctsn.gpio7_24 */
++	{UART1_CTSN, (M3 | PIN_INPUT_PULLUP | MANUAL_MODE)},	/* uart1_ctsn.gpio7_24 */	/* RCNEE:uart1_ctsn.mmc4_clk */
+ //	{UART1_RTSN, (M14 | PIN_INPUT)},	/* uart1_rtsn.gpio7_25 */
++	{UART1_RTSN, (M3 | PIN_INPUT_PULLUP | MANUAL_MODE)},	/* uart1_rtsn.gpio7_25 */	/* RCNEE:uart1_rtsn.mmc4_cmd */
+ //	{UART2_RXD, (M14 | PIN_INPUT_PULLDOWN)},	/* uart2_rxd.gpio7_26 */
++	{UART2_RXD, (M3 | PIN_INPUT_PULLUP | MANUAL_MODE)},	/* uart2_rxd.gpio7_26 */	/* RCNEE:uart2_rxd.mmc4_dat0 */
+ //	{UART2_TXD, (M14 | PIN_INPUT_PULLDOWN)},	/* uart2_txd.gpio7_27 */
++	{UART2_TXD, (M3 | PIN_INPUT_PULLUP | MANUAL_MODE)},	/* uart2_txd.gpio7_27 */	/* RCNEE:uart2_txd.mmc4_dat1 */
+ //	{UART2_CTSN, (M2 | PIN_INPUT_PULLUP)},	/* uart2_ctsn.uart3_rxd */
++	{UART2_CTSN, (M3 | PIN_INPUT_PULLUP | MANUAL_MODE)},	/* uart2_ctsn.uart3_rxd */	/* RCNEE:uart2_ctsn.mmc4_dat2 */
+ //	{UART2_RTSN, (M1 | PIN_OUTPUT)},	/* uart2_rtsn.uart3_txd */
++	{UART2_RTSN, (M3 | PIN_INPUT_PULLUP | MANUAL_MODE)},	/* uart2_rtsn.uart3_txd */	/* RCNEE:uart2_rtsn.mmc4_dat3 */
+ 	{I2C1_SDA, (M0 | PIN_INPUT_PULLUP)},	/* i2c1_sda.i2c1_sda */
+ 	{I2C1_SCL, (M0 | PIN_INPUT_PULLUP)},	/* i2c1_scl.i2c1_scl */
+ //	{I2C2_SDA, (M1 | PIN_INPUT_PULLUP)},	/* i2c2_sda.hdmi1_ddc_scl */
+@@ -1035,6 +1043,31 @@ const struct iodelay_cfg_entry iodelay_cfg_array_x15_sr2_0[] = {
+ 	{0x0CC8, 1984, 0},	/* CFG_VOUT1_DE_OUT */
+ 	{0x0CE0, 1947, 0},	/* CFG_VOUT1_HSYNC_OUT */
+ 	{0x0CEC, 2739, 0},	/* CFG_VOUT1_VSYNC_OUT */
++//TI PINMUX TOOL mapping....
++//0x4844A6E4	636	0	CFG_MMC3_DAT7_IN	AB5
++//0x4844A6E8	0	0	CFG_MMC3_DAT7_OEN	AB5
++//0x4844A6EC	0	0	CFG_MMC3_DAT7_OUT	AB5
++//	{0x06E4, 636, 0},	/* CFG_MMC3_DAT7_IN */
++//	{0x06E8, 0, 0},	/* CFG_MMC3_DAT7_OEN */
++//	{0x06EC, 0, 0},	/* CFG_MMC3_DAT7_OUT */
++
++	{0x0840, 0, 0},		/* CFG_UART1_CTSN_IN	E25 */
++	{0x0848, 0, 0},		/* CFG_UART1_CTSN_OUT	E25 */
++	{0x084C, 307, 0},	/* CFG_UART1_RTSN_IN	C27 */
++	{0x0850, 0, 0},		/* CFG_UART1_RTSN_OEN	C27 */
++	{0x0854, 0, 0},		/* CFG_UART1_RTSN_OUT	C27 */
++	{0x0888, 683, 0},	/* CFG_UART2_RXD_IN	D28 */
++	{0x088C, 0, 0},		/* CFG_UART2_RXD_OEN	D28 */
++	{0x0890, 0, 0},		/* CFG_UART2_RXD_OUT	D28 */
++	{0x0894, 835, 0},	/* CFG_UART2_TXD_IN	D26 */
++	{0x0898, 0, 0},		/* CFG_UART2_TXD_OEN	D26 */
++	{0x089C, 0, 0},		/* CFG_UART2_TXD_OUT	D26 */
++	{0x0870, 785, 0},	/* CFG_UART2_CTSN_IN	D27 */
++	{0x0874, 0, 0},		/* CFG_UART2_CTSN_OEN	D27 */
++	{0x0878, 0, 0},		/* CFG_UART2_CTSN_OUT	D27 */
++	{0x087C, 613, 0},	/* CFG_UART2_RTSN_IN	C28 */
++	{0x0880, 0, 0},		/* CFG_UART2_RTSN_OEN	C28 */
++	{0x0884, 0, 0},		/* CFG_UART2_RTSN_OUT	C28 */
+ };
+ 
+ const struct iodelay_cfg_entry iodelay_cfg_array_am572x_idk[] = {
+@@ -1169,5 +1202,6 @@ const struct iodelay_cfg_entry iodelay_cfg_array_am571x_idk_4port[] = {
+ 	{0x05AC, 2100, 1780},	/* CFG_MCASP5_FSX_IN */
+ 	{0x0B30, 0, 400},	/* CFG_VIN2A_D5_OUT */
+ };
++
+ #endif
+ #endif /* _MUX_DATA_BEAGLE_X15_H_ */
+diff --git a/include/configs/ti_omap5_common.h b/include/configs/ti_omap5_common.h
+index 490bc75b83..480e8850a5 100644
+--- a/include/configs/ti_omap5_common.h
++++ b/include/configs/ti_omap5_common.h
+@@ -85,6 +85,7 @@
+ 		"if test $board_eeprom_header = beagle_x15_revc_blank; then " \
+ 			"run eeprom_dump; run eeprom_x15_c; reset; fi;  \0" \
+ 	"findfdt="\
++		"echo board_name=[$board_name] ...; " \
+ 		"if test $board_name = omap5_uevm; then " \
+ 			"setenv fdtfile omap5-uevm.dtb; fi; " \
+ 		"if test $board_name = dra7xx; then " \

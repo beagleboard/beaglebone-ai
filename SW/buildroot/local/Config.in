@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_BeagleBone_AI_PATH/package/bcmdhd/Config.in"

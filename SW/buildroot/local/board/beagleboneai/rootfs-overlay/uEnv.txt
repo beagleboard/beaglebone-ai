@@ -1,0 +1,7 @@
+bootpart=0:1
+bootdir=/boot
+bootargs=console=ttyS0,115200n8 root=/dev/mmcblk0p1 ro rootfstype=ext4 rootwait
+devtype=mmc
+fdtdir=/boot
+fdtfile=am5729-beagleboneai.dtb
+uenvcmd=run loadimage;run loadfdt;printenv bootargs;bootz ${loadaddr} - ${fdtaddr};

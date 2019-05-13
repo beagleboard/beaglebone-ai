@@ -1,0 +1,5 @@
+config BR2_PACKAGE_BCMDHD
+	bool "bcmdhd"
+	depends on BR2_LINUX_KERNEL
+	help
+		Broadcom/Cypress out-of-tree wifi module driver

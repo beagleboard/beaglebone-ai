@@ -1,3 +1,6 @@
 [submodule "SW/buildroot/local/board/beagleboneai/dtb"]
 	path = SW/buildroot/local/board/beagleboneai/dtb
 	url = https://github.com/beagleboard/BeagleBoard-DeviceTrees
+[submodule "SW/linux"]
+	path = SW/linux
+	url = https://github.com/beagleboard/linux

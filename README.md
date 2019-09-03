@@ -1,7 +1,7 @@
 # BeagleBoard.org BeagleBone AI
 _Fast track to Embedded Artificial Intelligence_
 
-[BeagleBone AIps://beagleboard.org/ai) is TBD.
+[BeagleBone AI](https://beagleboard.org/ai) is TBD.
 
 # Terms
 These design materials are *NOT SUPPORTED* and *DO NOT* constitute a reference design. Only “community” support is allowed via resources at [BeagleBoard.org/discuss](https://beagleboard.org/discuss).

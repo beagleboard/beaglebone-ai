@@ -15605,8 +15605,8 @@
 								"interfacePinName": "scl",
 								"configurables": {
 									"pu_pd": {
-										"name": "nopull",
-										"displayName": "No Pull",
+										"name": "pu",
+										"displayName": "Pull Up",
 										"value": "N/A"
 									},
 									"rx": true
@@ -15643,8 +15643,8 @@
 								"interfacePinName": "sda",
 								"configurables": {
 									"pu_pd": {
-										"name": "nopull",
-										"displayName": "No Pull",
+										"name": "pu",
+										"displayName": "Pull Up",
 										"value": "N/A"
 									},
 									"rx": true

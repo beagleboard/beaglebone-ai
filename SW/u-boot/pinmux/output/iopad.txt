@@ -1,5 +1,5 @@
-{GPMC_A0, (M7 | PIN_INPUT)},	/* gpmc_a0.i2c4_scl */
-{GPMC_A1, (M7 | PIN_INPUT)},	/* gpmc_a1.i2c4_sda */
+{GPMC_A0, (M7 | PIN_INPUT_PULLUP)},	/* gpmc_a0.i2c4_scl */
+{GPMC_A1, (M7 | PIN_INPUT_PULLUP)},	/* gpmc_a1.i2c4_sda */
 {GPMC_A4, (M8 | PIN_INPUT)},	/* gpmc_a4.uart6_rxd */
 {GPMC_A5, (M8 | PIN_OUTPUT)},	/* gpmc_a5.uart6_txd */
 {GPMC_A6, (M8 | PIN_INPUT)},	/* gpmc_a6.uart6_ctsn */

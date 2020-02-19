@@ -1,0 +1,214 @@
+\t (00:02:13) allegro 17.2 S049 Windows SPB 64-bit Edition
+\t (00:02:13)     Journal start - Wed Feb 19 11:02:11 2020
+\t (00:02:13)         Host=LT5CG91776ZX User=a0321898 Pid=6040 CPUs=8
+\t (00:02:13) CmdLine= c:\cadence\spb_17.2\tools\bin\allegro.exe C:\Users\a0321898\Documents\GitHub\beaglebone-ai\HW\BeagleBone-AI.brd
+\t (00:02:13) 
+   (00:02:13) Loading axlcore.cxt 
+\t (00:02:16) Opening existing design...
+\i (00:02:20) fillin yes 
+\i (00:02:20) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged BeagleBone-AI
+\d (00:02:20) Design opened: C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/BeagleBone-AI.brd
+\i (00:02:20) trapsize 20590
+\i (00:02:21) trapsize 21260
+\i (00:02:21) trapsize 34895
+\i (00:02:21) trapsize 33796
+\i (00:02:21) generaledit 
+\i (00:02:29) artwork 
+\i (00:02:39) setwindow form.film_control
+\i (00:02:39) FORM film_control select_all  
+\i (00:02:56) FORM film_control create  
+\i (00:03:03) fillin yes 
+\t (00:03:03) Checking db records
+\t (00:03:03)     checking for orphans...
+\t (00:03:03)     Checked   3 percent
+\t (00:03:03)     Checked   7 percent
+\t (00:03:03)     Checked  11 percent
+\t (00:03:03)     Checked  15 percent
+\t (00:03:03)     Checked  19 percent
+\t (00:03:03)     Checked  23 percent
+\t (00:03:04)     Checked  27 percent
+\t (00:03:04)     Checked  31 percent
+\t (00:03:04)     Checked  35 percent
+\t (00:03:04)     Checked  39 percent
+\t (00:03:04)     Checked  43 percent
+\t (00:03:04)     Checked  47 percent
+\t (00:03:04)     Checked  51 percent
+\t (00:03:04)     Checked  55 percent
+\t (00:03:04)     Checked  59 percent
+\t (00:03:04)     Checked  63 percent
+\t (00:03:04)     Checked  67 percent
+\t (00:03:04)     Checked  71 percent
+\t (00:03:04)     Checked  75 percent
+\t (00:03:04)     Checked  78 percent
+\t (00:03:04)     Checked  82 percent
+\t (00:03:04)     Checked  86 percent
+\t (00:03:04)     Checked  90 percent
+\t (00:03:04)     Checked  94 percent
+\t (00:03:04)     Checked  98 percent
+\t (00:03:04)     Checked 100 percent
+\w (00:03:04) Run batch DRC to correctly regenerate DRC errs.
+
+\t (00:03:04) Done dbdoctor.
+\t (00:03:04) Starting Create artwork films...
+\w (00:03:05) WARNING(SPMHGE-269): artwork had warnings, use Viewlog to review the log file.
+\w (00:03:06) Artwork generated with warnings.
+\i (00:04:33) setwindow pcb
+\i (00:04:33) setwindow text
+\i (00:04:33) close
+\i (00:04:33) setwindow text
+\i (00:04:33) close
+\i (00:04:51) setwindow form.film_control
+\i (00:04:51) FORM film_control domain_setting  
+\i (00:04:58) setwindow form.film_domain
+\i (00:04:58) FORM film_domain cancel  
+\i (00:05:38) setwindow form.film_control
+\i (00:05:38) FORM film_control general_parameters  
+\e (00:06:37) Range is 0 to 6.
+\i (00:06:37) FORM film_control film_control  
+\i (00:06:41) FORM film_control create  
+\i (00:07:01) fillin yes 
+\t (00:07:01) Starting Create artwork films...
+\w (00:07:02) WARNING(SPMHGE-269): artwork had warnings, use Viewlog to review the log file.
+\w (00:07:03) Artwork generated with warnings.
+\i (00:07:17) setwindow pcb
+\i (00:07:17) setwindow text
+\i (00:07:17) close
+\i (00:07:17) setwindow text
+\i (00:07:17) close
+\i (00:07:20) setwindow form.film_control
+\i (00:07:20) FORM film_control general_parameters  
+\e (00:07:29) Range is 0 to 6.
+\i (00:07:34) FORM film_control format_dec_places 6 
+\i (00:07:34) FORM film_control ok  
+\i (00:07:34) setwindow pcb
+\i (00:07:34) generaledit 
+\i (00:07:46) artwork 
+\i (00:07:50) setwindow form.film_control
+\i (00:07:50) FORM film_control select_all  
+\i (00:07:52) FORM film_control domain_setting  
+\i (00:07:53) setwindow form.film_domain
+\i (00:07:53) FORM film_domain cancel  
+\i (00:08:28) setwindow form.film_control
+\i (00:08:28) FORM film_control ok  
+\i (00:08:28) setwindow pcb
+\i (00:08:28) generaledit 
+\i (00:08:34) artwork 
+\i (00:08:37) setwindow form.film_control
+\i (00:08:37) FORM film_control select_all  
+\i (00:08:40) FORM film_control create  
+\i (00:08:43) fillin yes 
+\t (00:08:43) Checking db records
+\t (00:08:43)     checking for orphans...
+\t (00:08:43)     Checked   3 percent
+\t (00:08:43)     Checked   7 percent
+\t (00:08:43)     Checked  11 percent
+\t (00:08:43)     Checked  15 percent
+\t (00:08:43)     Checked  19 percent
+\t (00:08:43)     Checked  23 percent
+\t (00:08:43)     Checked  27 percent
+\t (00:08:43)     Checked  31 percent
+\t (00:08:43)     Checked  35 percent
+\t (00:08:43)     Checked  39 percent
+\t (00:08:43)     Checked  43 percent
+\t (00:08:43)     Checked  47 percent
+\t (00:08:43)     Checked  51 percent
+\t (00:08:43)     Checked  55 percent
+\t (00:08:43)     Checked  59 percent
+\t (00:08:43)     Checked  63 percent
+\t (00:08:43)     Checked  67 percent
+\t (00:08:43)     Checked  71 percent
+\t (00:08:43)     Checked  74 percent
+\t (00:08:43)     Checked  78 percent
+\t (00:08:43)     Checked  82 percent
+\t (00:08:43)     Checked  86 percent
+\t (00:08:43)     Checked  90 percent
+\t (00:08:43)     Checked  94 percent
+\t (00:08:43)     Checked  98 percent
+\t (00:08:44)     Checked 100 percent
+\w (00:08:44) Run batch DRC to correctly regenerate DRC errs.
+
+\t (00:08:44) Done dbdoctor.
+\t (00:08:44) Starting Create artwork films...
+\w (00:08:45) WARNING(SPMHGE-269): artwork had warnings, use Viewlog to review the log file.
+\w (00:08:46) Artwork generated with warnings.
+\i (00:10:42) setwindow pcb
+\i (00:10:42) setwindow text
+\i (00:10:42) stick
+\i (00:10:46) setwindow text
+\i (00:10:46) save
+\i (00:11:02) fillin "art_log.txt"
+\i (00:11:08) setwindow text
+\i (00:11:08) close
+\i (00:11:08) setwindow text
+\i (00:11:08) close
+\i (00:11:19) setwindow form.film_control
+\i (00:11:19) FORM film_control cancel  
+\i (00:11:19) setwindow pcb
+\i (00:11:19) generaledit 
+\i (00:11:59) nctape_full 
+\w (00:11:59) WARNING(SPMHMF-272): NC Parameters file 'nc_param.txt' not found ... loading defaults.
+\i (00:12:20) setwindow form.nc_drill
+\i (00:12:20) FORM nc_drill execute  
+\w (00:12:20) WARNING(SPMHMF-269): Design contains slot holes that cannot be drilled. They can be processed by NC Route instead.
+\t (00:12:20) Starting Generating NC Drill...
+\i (00:12:27) FORM nc_drill cancel  
+\i (00:12:27) setwindow pcb
+\i (00:12:27) generaledit 
+\i (00:27:52) artwork 
+\i (00:27:54) setwindow form.film_control
+\i (00:27:54) FORM film_control select_all  
+\i (00:28:07) FORM film_control create  
+\i (00:28:09) fillin yes 
+\t (00:28:09) Checking db records
+\t (00:28:09)     checking for orphans...
+\t (00:28:09)     Checked   3 percent
+\t (00:28:09)     Checked   7 percent
+\t (00:28:09)     Checked  11 percent
+\t (00:28:09)     Checked  15 percent
+\t (00:28:09)     Checked  19 percent
+\t (00:28:09)     Checked  23 percent
+\t (00:28:09)     Checked  27 percent
+\t (00:28:09)     Checked  31 percent
+\t (00:28:09)     Checked  35 percent
+\t (00:28:09)     Checked  39 percent
+\t (00:28:09)     Checked  43 percent
+\t (00:28:09)     Checked  47 percent
+\t (00:28:09)     Checked  51 percent
+\t (00:28:09)     Checked  55 percent
+\t (00:28:09)     Checked  59 percent
+\t (00:28:09)     Checked  63 percent
+\t (00:28:09)     Checked  67 percent
+\t (00:28:09)     Checked  71 percent
+\t (00:28:09)     Checked  75 percent
+\t (00:28:09)     Checked  78 percent
+\t (00:28:09)     Checked  82 percent
+\t (00:28:09)     Checked  86 percent
+\t (00:28:09)     Checked  90 percent
+\t (00:28:09)     Checked  94 percent
+\t (00:28:09)     Checked  98 percent
+\t (00:28:09)     Checked 100 percent
+\w (00:28:09) Run batch DRC to correctly regenerate DRC errs.
+
+\t (00:28:09) Done dbdoctor.
+\t (00:28:09) Starting Create artwork films...
+\w (00:28:11) WARNING(SPMHGE-269): artwork had warnings, use Viewlog to review the log file.
+\w (00:28:12) Artwork generated with warnings.
+\i (00:28:16) setwindow pcb
+\i (00:28:16) setwindow text
+\i (00:28:16) close
+\i (00:28:16) setwindow text
+\i (00:28:16) close
+\i (00:29:46) setwindow form.film_control
+\i (00:29:46) FORM film_control ok  
+\i (00:29:46) setwindow pcb
+\i (00:29:46) generaledit 
+\i (00:29:56) nctape_full 
+\i (00:30:15) setwindow form.nc_drill
+\i (00:30:15) FORM nc_drill cancel  
+\i (00:30:15) setwindow pcb
+\i (00:30:15) generaledit 
+\i (00:31:32) exit 
+\e (00:31:32) Do you want to save the changes you made to BeagleBone-AI.brd?
+\i (00:31:36) fillin yes 
+   (00:31:37) Loading signal.cxt 
+\t (00:31:37)     Journal end - Wed Feb 19 11:31:35 2020

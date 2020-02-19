@@ -1,0 +1,2373 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : BeagleBone-AI.brd                             )
+(    Software Version : 17.2S049                                      )
+(    Date/Time        : Wed Feb 19 11:28:08 2020                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ ******************************************
+ WARNING: DRC OUT OF DATE on this layout.
+ ******************************************
+
+
+
+ Can't open parameter file ... using default values:
+     DEVICE-TYPE        GERBER6X00
+     G-CODES            NO
+     STATIONS-PER-WHEEL 24
+     FILM-SIZE          24000 16000
+     COORDINATES        ABSOLUTE
+     OUTPUT-UNITS       INCHES
+     FORMAT             5.3
+     ABORT-ON-ERROR     abort film & continue
+     SUPPRESS-LEAD-ZEROES     YES
+     SUPPRESS-TRAIL-ZEROES    NO
+     OPTIMIZE           YES
+     SUPPRESS-EQUAL     YES
+     SCALE              1.0
+
+
+
+
+
+================================================================
+     PROCESSING FILM < TOP >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Suppress shape fill on neg film     NO
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: 0 width line found at (-325.000 -125.000) in MIL
+           ... using undefined line width of 5.000 MIL
+
+    WARNING: Segment with same start and end points at
+	(-485.143 609.002) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(475.000 159.502) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(803.652 512.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(972.000 170.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(972.002 244.002) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(972.000 278.498) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(972.002 351.502) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1538.569 1193.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1544.455 998.031) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1759.902 1043.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.098 1234.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2213.002 364.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2337.000 1080.388) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1475.687 378.313) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1216.492 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1247.988 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1279.484 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1216.492 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1279.484 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1247.988 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1373.972 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1342.476 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1310.980 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1310.980 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1342.476 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.275 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1468.461 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.276 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.275 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2447.929 1452.480) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2467.614 1452.480) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2487.299 1452.480) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2506.984 1452.480) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1358.213 1297.256) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1342.476 1312.992) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1373.972 1312.992) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1240.811 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1272.307 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1366.795 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1303.803 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1335.299 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1373.972 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1373.972 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1405.469 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1405.469 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.275 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1405.469 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1405.469 966.535) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1436.965 998.031) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1405.469 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1436.965 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.772 235.409) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.275 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2566.040 1295.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2487.299 1354.056) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2585.725 1314.685) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2566.039 1295.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.283 308.890) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.787 340.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.283 623.850) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1247.988 1470.472) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1279.484 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1373.972 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1342.476 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1389.709 1424.709) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1310.980 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1468.461 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1436.965 1470.472) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1499.957 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1562.949 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1531.453 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1625.941 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1720.429 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1657.437 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1846.413 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1814.917 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1783.421 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1751.925 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1877.909 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1972.398 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1909.406 998.031) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1940.902 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1940.902 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1972.398 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2003.894 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2003.894 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2448.288 1524.213) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2350.001 1682.500) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.787 623.850) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(775.882 802.657) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(775.882 802.658) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1562.949 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1625.941 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1594.445 998.031) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1688.933 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.283 592.354) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.283 560.858) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.284 592.354) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.284 560.858) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.283 592.354) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1405.469 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1499.957 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1468.461 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1531.453 966.535) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1531.453 998.031) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1688.933 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1657.437 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1751.925 998.031) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1720.429 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1814.917 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1814.917 998.031) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1846.413 998.032) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1940.902 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1972.398 966.536) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2066.886 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2035.390 1470.473) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.284 277.394) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.788 277.394) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.284 340.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.284 371.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.787 371.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.788 466.370) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.284 466.370) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.284 497.866) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.788 497.866) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.787 466.370) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.787 497.866) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.283 497.866) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.283 497.866) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(263.788 497.866) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(295.284 497.866) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00320                                  DARK 
+  CIRCLE     0.00394                                  DARK 
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00430                                  DARK 
+  CIRCLE     0.00450                                  DARK 
+  CIRCLE     0.00472                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00700                                  DARK 
+  CIRCLE     0.00787                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01200                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01575                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03000                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06300                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.07100                                  DARK 
+  CIRCLE     0.09500                                  DARK 
+  CIRCLE     0.12600                                  DARK 
+  CIRCLE     0.17500                                  DARK 
+  SQUARE     0.03200                     0.000 NO     DARK 
+  SQUARE     0.03500                     0.000 NO     DARK 
+  SQUARE     0.04000                     0.000 NO     DARK 
+  SQUARE     0.05200                    45.000 NO     DARK 
+  SQUARE     0.06200                     0.000 NO     DARK 
+  SQUARE     0.06300                     0.000 NO     DARK 
+  SQUARE     0.06693                     0.000 NO     DARK 
+  SQUARE     0.13200                     0.000 NO     DARK 
+  RECTANGLE  0.01181     x 0.02756      90.000 NO     DARK 
+  RECTANGLE  0.01600     x 0.02000      90.000 NO     DARK 
+  RECTANGLE  0.01600     x 0.03200      90.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02200       0.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02200      90.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02400       0.000 NO     DARK 
+  RECTANGLE  0.02165     x 0.01850       0.000 NO     DARK 
+  RECTANGLE  0.02165     x 0.01850      90.000 NO     DARK 
+  RECTANGLE  0.02500     x 0.04000      90.000 NO     DARK 
+  RECTANGLE  0.03000     x 0.03500       0.000 NO     DARK 
+  RECTANGLE  0.03000     x 0.03500      90.000 NO     DARK 
+  RECTANGLE  0.03347     x 0.07874       0.000 NO     DARK 
+  RECTANGLE  0.03400     x 0.07900       0.000 NO     DARK 
+  RECTANGLE  0.03600     x 0.04000      90.000 NO     DARK 
+  RECTANGLE  0.03740     x 0.02362       0.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.05512      90.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.05000      90.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.05900       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.10000      90.000 NO     DARK 
+  RECTANGLE  0.04200     x 0.08700      90.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.02756       0.000 NO     DARK 
+  RECTANGLE  0.04429     x 0.01968       0.000 NO     DARK 
+  RECTANGLE  0.04429     x 0.01968      90.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.03937       0.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.03937      90.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.05512      90.000 NO     DARK 
+  RECTANGLE  0.05900     x 0.09800       0.000 NO     DARK 
+  RECTANGLE  0.14173     x 0.05315      90.000 NO     DARK 
+  OBLONG     0.00787     x 0.01968       0.000 NO     DARK 
+  OBLONG     0.00787     x 0.02756      90.000 NO     DARK 
+  OBLONG     0.00800     x 0.03200       0.000 NO     DARK 
+  OBLONG     0.00800     x 0.03200      90.000 NO     DARK 
+  OBLONG     0.01000     x 0.02800       0.000 NO     DARK 
+  OBLONG     0.01000     x 0.03200       0.000 NO     DARK 
+  OBLONG     0.01000     x 0.03200      90.000 NO     DARK 
+  OBLONG     0.02000     x 0.04000       0.000 NO     DARK 
+  OBLONG     0.02000     x 0.04000      90.000 NO     DARK 
+  OBLONG     0.02953     x 0.00787       0.000 NO     DARK 
+  OBLONG     0.02953     x 0.00787      90.000 NO     DARK 
+  OBLONG     0.03150     x 0.01181       0.000 NO     DARK 
+  OBLONG     0.03150     x 0.01181      90.000 NO     DARK 
+  OBLONG     0.03937     x 0.06299      90.000 NO     DARK 
+  OBLONG     0.03937     x 0.07087      90.000 NO     DARK 
+  OBLONG     0.05118     x 0.09252      90.000 NO     DARK 
+  OBLONG     0.08000     x 0.13500      90.000 NO     DARK 
+
+     TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY2_GND >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY2_GND.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 5.000 MIL
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03000                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.09500                                  DARK 
+  CIRCLE     0.17500                                  DARK 
+  OBLONG     0.03937     x 0.06299      90.000 NO     DARK 
+  OBLONG     0.03937     x 0.07087      90.000 NO     DARK 
+  OBLONG     0.05118     x 0.09252      90.000 NO     DARK 
+  OBLONG     0.08000     x 0.13500      90.000 NO     DARK 
+
+     LAY2_GND created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY3 >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY3.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: Segment with same start and end points at
+	(1263.724 1580.720) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1358.212 1549.224) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1327.111 1485.839) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1404.961 489.323) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1389.531 678.890) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1399.531 688.890) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1830.677 1454.737) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00450                                  DARK 
+  CIRCLE     0.00475                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01200                                  DARK 
+  CIRCLE     0.01300                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+
+     LAY3 created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY4_GND >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY4_GND.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03000                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+
+     LAY4_GND created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY5 >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY5.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: Segment with same start and end points at
+	(330.143 244.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2200.998 882.271) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1358.213 1360.248) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1462.780 1570.641) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00370                                  DARK 
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00430                                  DARK 
+  CIRCLE     0.00475                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+
+     LAY5 created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY6_PWR >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY6_PWR.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: Segment with same start and end points at
+	(894.612 121.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1652.386 120.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1925.388 1773.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(333.614 1773.002) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2253.000 1755.388) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2252.998 1675.614) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2439.614 494.002) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(166.015 48.941) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(110.042 233.893) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+
+     LAY6_PWR created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY7_PWR >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY7_PWR.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: Segment with same start and end points at
+	(1550.143 1000.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+
+     LAY7_PWR created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY8 >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY8.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: Segment with same start and end points at
+	(1001.287 1255.994) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(821.041 168.106) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(802.958 168.107) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1024.016 1376.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1015.252 1376.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(797.000 1390.039) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1012.110 1347.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(978.563 1338.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1015.839 1356.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1093.043 1354.457) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1082.504 1365.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1082.500 1365.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1067.591 1365.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1019.567 1365.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(967.378 1365.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1148.445 1373.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1058.705 1385.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1054.260 1385.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1027.744 1385.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1105.472 1433.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1009.799 1394.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1031.469 1394.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1050.528 1394.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1062.429 1394.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1128.260 1392.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1007.075 1403.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1035.197 1403.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1046.799 1403.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1066.157 1403.004) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1005.016 1264.996) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1008.740 1274.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(982.287 1329.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1101.737 1441.996) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1622.169 1567.374) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(986.016 1320.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1625.904 1576.370) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1625.900 1576.374) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00370                                  DARK 
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00430                                  DARK 
+  CIRCLE     0.00475                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.07100                                  DARK 
+
+     LAY8 created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY9_GND >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY9_GND.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+
+     LAY9_GND created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY10 >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY10.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: Segment with same start and end points at
+	(1644.000 1681.228) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(-186.362 312.288) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1264.476 1328.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1436.632 320.994) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00450                                  DARK 
+  CIRCLE     0.00475                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+
+     LAY10 created with warnings
+
+
+================================================================
+     PROCESSING FILM < LAY11_GND >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/LAY11_GND.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03000                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.09500                                  DARK 
+  CIRCLE     0.17500                                  DARK 
+  OBLONG     0.03937     x 0.06299      90.000 NO     DARK 
+  OBLONG     0.03937     x 0.07087      90.000 NO     DARK 
+  OBLONG     0.05118     x 0.09252      90.000 NO     DARK 
+  OBLONG     0.08000     x 0.13500      90.000 NO     DARK 
+
+     LAY11_GND created with warnings
+
+
+================================================================
+     PROCESSING FILM < BOTTOM >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: Segment with same start and end points at
+	(46.000 265.002) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(462.502 226.643) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(878.002 346.143) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(830.002 413.643) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1568.002 771.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1512.996 1377.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1519.998 1376.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1750.998 976.002) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1750.998 975.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1853.998 1008.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1854.002 1008.998) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1844.145 1281.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1774.998 1260.857) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.275 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.275 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.276 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.275 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 298.402) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1240.811 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1272.307 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1366.795 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1303.803 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1335.299 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1492.779 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1555.771 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1524.275 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1587.267 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1618.763 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 266.906) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1713.251 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1681.755 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1650.259 487.378) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1484.197 1486.232) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(2089.478 1440.000) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1429.787 235.410) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1240.811 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1260.882 455.882) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1366.795 424.386) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+    WARNING: Segment with same start and end points at
+	(1865.996 1289.996) will be ignored. Increasing output
+	accuracy may allow segment to be generated.
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00320                                  DARK 
+  CIRCLE     0.00394                                  DARK 
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00430                                  DARK 
+  CIRCLE     0.00450                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00700                                  DARK 
+  CIRCLE     0.00787                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01200                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01600                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02362                                  DARK 
+  CIRCLE     0.03000                                  DARK 
+  CIRCLE     0.03500                                  DARK 
+  CIRCLE     0.03937                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06200                                  DARK 
+  CIRCLE     0.06300                                  DARK 
+  CIRCLE     0.06500                                  DARK 
+  CIRCLE     0.07100                                  DARK 
+  CIRCLE     0.09500                                  DARK 
+  CIRCLE     0.12600                                  DARK 
+  CIRCLE     0.17500                                  DARK 
+  SQUARE     0.04000                     0.000 NO     DARK 
+  SQUARE     0.04800                     0.000 NO     DARK 
+  SQUARE     0.06200                     0.000 NO     DARK 
+  SQUARE     0.06300                     0.000 NO     DARK 
+  SQUARE     0.07000                     0.000 NO     DARK 
+  SQUARE     0.08071                     0.000 NO     DARK 
+  RECTANGLE  0.00906     x 0.03347      90.000 NO     DARK 
+  RECTANGLE  0.00906     x 0.03937      90.000 NO     DARK 
+  RECTANGLE  0.01600     x 0.02000       0.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02200       0.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02200      90.000 NO     DARK 
+  RECTANGLE  0.02165     x 0.01850       0.000 NO     DARK 
+  RECTANGLE  0.02165     x 0.01850      90.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.05118       0.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.07480       0.000 NO     DARK 
+  RECTANGLE  0.02500     x 0.04000      90.000 NO     DARK 
+  RECTANGLE  0.02800     x 0.11000      90.000 NO     DARK 
+  RECTANGLE  0.03000     x 0.03500       0.000 NO     DARK 
+  RECTANGLE  0.03000     x 0.03500      90.000 NO     DARK 
+  RECTANGLE  0.03150     x 0.05906      90.000 NO     DARK 
+  RECTANGLE  0.03347     x 0.03937      90.000 NO     DARK 
+  RECTANGLE  0.03347     x 0.07874       0.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.05512       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.05900       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.05900      90.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.10000      90.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.02756       0.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.05512       0.000 NO     DARK 
+  RECTANGLE  0.05118     x 0.05512      90.000 NO     DARK 
+  RECTANGLE  0.05433     x 0.09449       0.000 NO     DARK 
+  RECTANGLE  0.05512     x 0.07480      90.000 NO     DARK 
+  RECTANGLE  0.05600     x 0.06900       0.000 NO     DARK 
+  OBLONG     0.00984     x 0.03150      90.000 NO     DARK 
+  OBLONG     0.01000     x 0.03200       0.000 NO     DARK 
+  OBLONG     0.01200     x 0.04800      90.000 NO     DARK 
+  OBLONG     0.03543     x 0.01181       0.000 NO     DARK 
+  OBLONG     0.03543     x 0.01181      90.000 NO     DARK 
+  OBLONG     0.03937     x 0.06299      90.000 NO     DARK 
+  OBLONG     0.03937     x 0.07087      90.000 NO     DARK 
+  OBLONG     0.05118     x 0.09252      90.000 NO     DARK 
+  OBLONG     0.08000     x 0.13500      90.000 NO     DARK 
+  PAD SHAPE  R380_165                  270.000 YES    DARK 
+
+     BOTTOM created with warnings
+
+
+================================================================
+     PROCESSING FILM < SILK_TOP >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/SILK_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00300                                  DARK 
+  CIRCLE     0.00394                                  DARK 
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00591                                  DARK 
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00787                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+
+     SILK_TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < SILK_BOT >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/SILK_BOT.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00350                                  DARK 
+  CIRCLE     0.00400                                  DARK 
+  CIRCLE     0.00472                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00591                                  DARK 
+  CIRCLE     0.00591                                  DARK 
+  CIRCLE     0.00600                                  DARK 
+
+     SILK_BOT created with warnings
+
+
+================================================================
+     PROCESSING FILM < PAST_TOP >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/PAST_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00787                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01575                                  DARK 
+  SQUARE     0.03200                     0.000 NO     DARK 
+  SQUARE     0.03500                     0.000 NO     DARK 
+  SQUARE     0.04000                     0.000 NO     DARK 
+  SQUARE     0.05200                    45.000 NO     DARK 
+  SQUARE     0.06693                     0.000 NO     DARK 
+  SQUARE     0.13200                     0.000 NO     DARK 
+  RECTANGLE  0.01181     x 0.02756      90.000 NO     DARK 
+  RECTANGLE  0.01600     x 0.02000      90.000 NO     DARK 
+  RECTANGLE  0.01600     x 0.03200      90.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02200       0.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02200      90.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02400       0.000 NO     DARK 
+  RECTANGLE  0.02165     x 0.01850       0.000 NO     DARK 
+  RECTANGLE  0.02165     x 0.01850      90.000 NO     DARK 
+  RECTANGLE  0.02500     x 0.04000      90.000 NO     DARK 
+  RECTANGLE  0.03000     x 0.03500       0.000 NO     DARK 
+  RECTANGLE  0.03000     x 0.03500      90.000 NO     DARK 
+  RECTANGLE  0.03347     x 0.07874       0.000 NO     DARK 
+  RECTANGLE  0.03400     x 0.07900       0.000 NO     DARK 
+  RECTANGLE  0.03600     x 0.04000      90.000 NO     DARK 
+  RECTANGLE  0.03740     x 0.02362       0.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.05512      90.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.05000      90.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.05900       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.10000      90.000 NO     DARK 
+  RECTANGLE  0.04200     x 0.08700      90.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.02756       0.000 NO     DARK 
+  RECTANGLE  0.04429     x 0.01968       0.000 NO     DARK 
+  RECTANGLE  0.04429     x 0.01968      90.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.03937       0.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.03937      90.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.05512      90.000 NO     DARK 
+  RECTANGLE  0.05900     x 0.09800       0.000 NO     DARK 
+  RECTANGLE  0.11266     x 0.02408      90.000 NO     DARK 
+  OBLONG     0.00787     x 0.01968       0.000 NO     DARK 
+  OBLONG     0.00787     x 0.02756      90.000 NO     DARK 
+  OBLONG     0.00800     x 0.03200       0.000 NO     DARK 
+  OBLONG     0.00800     x 0.03200      90.000 NO     DARK 
+  OBLONG     0.01000     x 0.02800       0.000 NO     DARK 
+  OBLONG     0.01000     x 0.03200       0.000 NO     DARK 
+  OBLONG     0.01000     x 0.03200      90.000 NO     DARK 
+  OBLONG     0.02000     x 0.04000       0.000 NO     DARK 
+  OBLONG     0.02000     x 0.04000      90.000 NO     DARK 
+  OBLONG     0.02953     x 0.00787       0.000 NO     DARK 
+  OBLONG     0.02953     x 0.00787      90.000 NO     DARK 
+  OBLONG     0.03150     x 0.01181       0.000 NO     DARK 
+  OBLONG     0.03150     x 0.01181      90.000 NO     DARK 
+
+     PAST_TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < PAST_BOT >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/PAST_BOT.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00787                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  SQUARE     0.04800                     0.000 NO     DARK 
+  SQUARE     0.07000                     0.000 NO     DARK 
+  SQUARE     0.08071                     0.000 NO     DARK 
+  RECTANGLE  0.00906     x 0.03347      90.000 NO     DARK 
+  RECTANGLE  0.00906     x 0.03937      90.000 NO     DARK 
+  RECTANGLE  0.01600     x 0.02000       0.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02200       0.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02200      90.000 NO     DARK 
+  RECTANGLE  0.02165     x 0.01850       0.000 NO     DARK 
+  RECTANGLE  0.02165     x 0.01850      90.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.05118       0.000 NO     DARK 
+  RECTANGLE  0.02362     x 0.07480       0.000 NO     DARK 
+  RECTANGLE  0.02500     x 0.04000      90.000 NO     DARK 
+  RECTANGLE  0.02800     x 0.11000      90.000 NO     DARK 
+  RECTANGLE  0.03000     x 0.03500       0.000 NO     DARK 
+  RECTANGLE  0.03000     x 0.03500      90.000 NO     DARK 
+  RECTANGLE  0.03150     x 0.05906      90.000 NO     DARK 
+  RECTANGLE  0.03347     x 0.03937      90.000 NO     DARK 
+  RECTANGLE  0.03347     x 0.07874       0.000 NO     DARK 
+  RECTANGLE  0.03937     x 0.05512       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.05900       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.05900      90.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.10000      90.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.02756       0.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.05512       0.000 NO     DARK 
+  RECTANGLE  0.05118     x 0.05512      90.000 NO     DARK 
+  RECTANGLE  0.05433     x 0.09449       0.000 NO     DARK 
+  RECTANGLE  0.05512     x 0.07480      90.000 NO     DARK 
+  RECTANGLE  0.05600     x 0.06900       0.000 NO     DARK 
+  OBLONG     0.00984     x 0.03150      90.000 NO     DARK 
+  OBLONG     0.01000     x 0.03200       0.000 NO     DARK 
+  OBLONG     0.01200     x 0.04800      90.000 NO     DARK 
+  OBLONG     0.03543     x 0.01181       0.000 NO     DARK 
+  OBLONG     0.03543     x 0.01181      90.000 NO     DARK 
+  PAD SHAPE  R380_165                  270.000 YES    DARK 
+
+     PAST_BOT created with warnings
+
+
+================================================================
+     PROCESSING FILM < MASK_TOP >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/MASK_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01181                                  DARK 
+  CIRCLE     0.01200                                  DARK 
+  CIRCLE     0.01900                                  DARK 
+  CIRCLE     0.01968                                  DARK 
+  CIRCLE     0.02756                                  DARK 
+  CIRCLE     0.03500                                  DARK 
+  CIRCLE     0.04200                                  DARK 
+  CIRCLE     0.04331                                  DARK 
+  CIRCLE     0.06600                                  DARK 
+  CIRCLE     0.06900                                  DARK 
+  CIRCLE     0.07500                                  DARK 
+  CIRCLE     0.09800                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  CIRCLE     0.13000                                  DARK 
+  CIRCLE     0.18500                                  DARK 
+  SQUARE     0.03600                     0.000 NO     DARK 
+  SQUARE     0.03900                     0.000 NO     DARK 
+  SQUARE     0.04400                     0.000 NO     DARK 
+  SQUARE     0.05400                    45.000 NO     DARK 
+  SQUARE     0.06600                     0.000 NO     DARK 
+  SQUARE     0.07087                     0.000 NO     DARK 
+  SQUARE     0.13400                     0.000 NO     DARK 
+  RECTANGLE  0.01575     x 0.03150      90.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02400      90.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.03600      90.000 NO     DARK 
+  RECTANGLE  0.02200     x 0.02400       0.000 NO     DARK 
+  RECTANGLE  0.02200     x 0.02400      90.000 NO     DARK 
+  RECTANGLE  0.02400     x 0.02800       0.000 NO     DARK 
+  RECTANGLE  0.02559     x 0.02244       0.000 NO     DARK 
+  RECTANGLE  0.02559     x 0.02244      90.000 NO     DARK 
+  RECTANGLE  0.02900     x 0.04400      90.000 NO     DARK 
+  RECTANGLE  0.03400     x 0.03900       0.000 NO     DARK 
+  RECTANGLE  0.03400     x 0.03900      90.000 NO     DARK 
+  RECTANGLE  0.03740     x 0.08268       0.000 NO     DARK 
+  RECTANGLE  0.03800     x 0.08300       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.04400      90.000 NO     DARK 
+  RECTANGLE  0.04134     x 0.02756       0.000 NO     DARK 
+  RECTANGLE  0.04300     x 0.05300      90.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.05906      90.000 NO     DARK 
+  RECTANGLE  0.04400     x 0.06300       0.000 NO     DARK 
+  RECTANGLE  0.04400     x 0.10400      90.000 NO     DARK 
+  RECTANGLE  0.04600     x 0.09100      90.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.03150       0.000 NO     DARK 
+  RECTANGLE  0.04823     x 0.02362       0.000 NO     DARK 
+  RECTANGLE  0.04823     x 0.02362      90.000 NO     DARK 
+  RECTANGLE  0.05118     x 0.04331       0.000 NO     DARK 
+  RECTANGLE  0.05118     x 0.04331      90.000 NO     DARK 
+  RECTANGLE  0.05118     x 0.05906      90.000 NO     DARK 
+  RECTANGLE  0.06300     x 0.10200       0.000 NO     DARK 
+  RECTANGLE  0.13780     x 0.04921      90.000 NO     DARK 
+  OBLONG     0.01181     x 0.02362       0.000 NO     DARK 
+  OBLONG     0.01181     x 0.03150      90.000 NO     DARK 
+  OBLONG     0.01200     x 0.03600       0.000 NO     DARK 
+  OBLONG     0.01200     x 0.03600      90.000 NO     DARK 
+  OBLONG     0.01400     x 0.03200       0.000 NO     DARK 
+  OBLONG     0.01400     x 0.03600       0.000 NO     DARK 
+  OBLONG     0.01400     x 0.03600      90.000 NO     DARK 
+  OBLONG     0.02300     x 0.04300       0.000 NO     DARK 
+  OBLONG     0.02300     x 0.04300      90.000 NO     DARK 
+  OBLONG     0.03347     x 0.01181       0.000 NO     DARK 
+  OBLONG     0.03347     x 0.01181      90.000 NO     DARK 
+  OBLONG     0.03543     x 0.01575       0.000 NO     DARK 
+  OBLONG     0.03543     x 0.01575      90.000 NO     DARK 
+  OBLONG     0.04331     x 0.06693      90.000 NO     DARK 
+  OBLONG     0.04331     x 0.07480      90.000 NO     DARK 
+  OBLONG     0.05512     x 0.09646      90.000 NO     DARK 
+  OBLONG     0.09000     x 0.14400      90.000 NO     DARK 
+
+     MASK_TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < MASK_BOT >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/MASK_BOT.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.01181                                  DARK 
+  CIRCLE     0.01900                                  DARK 
+  CIRCLE     0.02756                                  DARK 
+  CIRCLE     0.03500                                  DARK 
+  CIRCLE     0.04200                                  DARK 
+  CIRCLE     0.04331                                  DARK 
+  CIRCLE     0.06600                                  DARK 
+  CIRCLE     0.06900                                  DARK 
+  CIRCLE     0.07500                                  DARK 
+  CIRCLE     0.09800                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  CIRCLE     0.13000                                  DARK 
+  CIRCLE     0.18500                                  DARK 
+  SQUARE     0.04400                     0.000 NO     DARK 
+  SQUARE     0.05200                     0.000 NO     DARK 
+  SQUARE     0.06600                     0.000 NO     DARK 
+  SQUARE     0.07300                     0.000 NO     DARK 
+  SQUARE     0.08465                     0.000 NO     DARK 
+  RECTANGLE  0.01299     x 0.03740      90.000 NO     DARK 
+  RECTANGLE  0.01299     x 0.04331      90.000 NO     DARK 
+  RECTANGLE  0.02000     x 0.02400       0.000 NO     DARK 
+  RECTANGLE  0.02200     x 0.02400       0.000 NO     DARK 
+  RECTANGLE  0.02200     x 0.02400      90.000 NO     DARK 
+  RECTANGLE  0.02559     x 0.02244       0.000 NO     DARK 
+  RECTANGLE  0.02559     x 0.02244      90.000 NO     DARK 
+  RECTANGLE  0.02756     x 0.05512       0.000 NO     DARK 
+  RECTANGLE  0.02756     x 0.07874       0.000 NO     DARK 
+  RECTANGLE  0.02900     x 0.04400      90.000 NO     DARK 
+  RECTANGLE  0.03347     x 0.04331      90.000 NO     DARK 
+  RECTANGLE  0.03400     x 0.03900       0.000 NO     DARK 
+  RECTANGLE  0.03400     x 0.03900      90.000 NO     DARK 
+  RECTANGLE  0.03400     x 0.11600      90.000 NO     DARK 
+  RECTANGLE  0.03543     x 0.06299      90.000 NO     DARK 
+  RECTANGLE  0.03740     x 0.08268       0.000 NO     DARK 
+  RECTANGLE  0.04331     x 0.05906       0.000 NO     DARK 
+  RECTANGLE  0.04400     x 0.06300       0.000 NO     DARK 
+  RECTANGLE  0.04400     x 0.06300      90.000 NO     DARK 
+  RECTANGLE  0.04400     x 0.10400      90.000 NO     DARK 
+  RECTANGLE  0.04724     x 0.03150       0.000 NO     DARK 
+  RECTANGLE  0.05118     x 0.05906       0.000 NO     DARK 
+  RECTANGLE  0.05512     x 0.05906      90.000 NO     DARK 
+  RECTANGLE  0.05827     x 0.09842       0.000 NO     DARK 
+  RECTANGLE  0.05906     x 0.07874      90.000 NO     DARK 
+  RECTANGLE  0.06000     x 0.07300       0.000 NO     DARK 
+  OBLONG     0.01378     x 0.03543      90.000 NO     DARK 
+  OBLONG     0.01400     x 0.03600       0.000 NO     DARK 
+  OBLONG     0.01600     x 0.05200      90.000 NO     DARK 
+  OBLONG     0.03937     x 0.01575       0.000 NO     DARK 
+  OBLONG     0.03937     x 0.01575      90.000 NO     DARK 
+  OBLONG     0.04331     x 0.06693      90.000 NO     DARK 
+  OBLONG     0.04331     x 0.07480      90.000 NO     DARK 
+  OBLONG     0.05512     x 0.09646      90.000 NO     DARK 
+  OBLONG     0.09000     x 0.14500      90.000 NO     DARK 
+  PAD SHAPE  R390_175                  270.000 YES    DARK 
+
+     MASK_BOT created with warnings
+
+
+================================================================
+     PROCESSING FILM < DRILL >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/DRILL.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00510                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+
+     DRILL created with warnings
+
+
+================================================================
+     PROCESSING FILM < ASSEM_TOP >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/ASSEM_TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+    WARNING: text composed 0 width line found at (-93.000 -54.000) in MIL
+           ... using undefined line width of 5.000 MIL
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 5.000 MIL
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00200                                  DARK 
+  CIRCLE     0.00394                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00591                                  DARK 
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+
+     ASSEM_TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < ASSEM_BOT >
+     TO FILE < C:/Users/a0321898/Documents/GitHub/beaglebone-ai/HW/ASSEM_BOT.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                5.000 MIL
+  Mirror code                         X
+  Rotate angle                        NONE
+  Offset x:                           0.000
+  Offset y:                           0.000
+  Plot negative                       NO
+  Suppress unconnected internal pads  DYNAMIC
+  Draw holes only                     NO
+
+    WARNING: Photoplot window (3650900 x 2610900) exceeds film size (2400000 x 1600000)
+          stated in parameter file. 
+
+
+
+  APERTURES USED (UNIT = IN):
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00200                                  DARK 
+  CIRCLE     0.00394                                  DARK 
+  CIRCLE     0.00500                                  DARK 
+  CIRCLE     0.00591                                  DARK 
+  CIRCLE     0.00600                                  DARK 
+
+     ASSEM_BOT created with warnings
+
+
+------------------------------------------------------
+ SUMMARY:
+        TOP created with warnings
+        LAY2_GND created with warnings
+        LAY3 created with warnings
+        LAY4_GND created with warnings
+        LAY5 created with warnings
+        LAY6_PWR created with warnings
+        LAY7_PWR created with warnings
+        LAY8 created with warnings
+        LAY9_GND created with warnings
+        LAY10 created with warnings
+        LAY11_GND created with warnings
+        BOTTOM created with warnings
+        SILK_TOP created with warnings
+        SILK_BOT created with warnings
+        PAST_TOP created with warnings
+        PAST_BOT created with warnings
+        MASK_TOP created with warnings
+        MASK_BOT created with warnings
+        DRILL created with warnings
+        ASSEM_TOP created with warnings
+        ASSEM_BOT created with warnings
+
+ ARTWORK had warnings

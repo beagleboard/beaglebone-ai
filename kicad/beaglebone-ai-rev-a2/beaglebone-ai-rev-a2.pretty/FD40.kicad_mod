@@ -1,0 +1,12 @@
+(footprint "FD40" (version 20210126) (generator pcbnew) (layer "F.Cu")
+  (tedit 0)
+  (fp_text reference "REF**" (at 0 0) (layer "F.SilkS") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)))
+    (tstamp 0fcf1db9-7056-48cb-9150-bb536eb8e13c)
+  )
+  (fp_text value "NI" (at 0 0) (layer "F.SilkS") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)))
+    (tstamp 60c251c9-8ce8-4d31-b54f-2575c72f0441)
+  )
+  (pad "1" smd circle (at 0 0) (size 1.016 1.016) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp bbd8e915-0b88-4451-9012-7baa79073dae))
+)

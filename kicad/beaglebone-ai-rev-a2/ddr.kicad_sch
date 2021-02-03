@@ -1,0 +1,51 @@
+(kicad_sch (version 20210126) (generator eeschema)
+
+  (paper "A4")
+
+  (title_block
+    (title "BeagleBone AI AM57x")
+    (date "2021-01-15")
+    (rev "Kicad-A1")
+    (company "KiCad Services Corporation")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 62.23 50.8) (size 35.56 62.23)
+    (stroke (width 0.001) (type solid) (color 132 0 132 1))
+    (fill (color 255 255 255 0.0000))
+    (uuid 66e08fd3-4829-4d4f-b342-e0e5e081dfa6)
+    (property "Sheet name" "DDR Part 1" (id 0) (at 62.23 50.1641 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "ddr1.kicad_sch" (id 1) (at 62.23 113.5389 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 114.3 50.8) (size 35.56 62.23)
+    (stroke (width 0.001) (type solid) (color 132 0 132 1))
+    (fill (color 255 255 255 0.0000))
+    (uuid f9a202a1-6b5a-4fb7-bbd1-5d665aa4a7bc)
+    (property "Sheet name" "DDR Part 2" (id 0) (at 114.3 50.1641 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "ddr2.kicad_sch" (id 1) (at 114.3 113.5389 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 172.72 50.8) (size 34.29 62.23)
+    (stroke (width 0.001) (type solid) (color 132 0 132 1))
+    (fill (color 169 239 199 1.0000))
+    (uuid d730d576-48c2-45dd-ad38-7f5e2a90e54c)
+    (property "Sheet name" "DDR VTT/LEDs" (id 0) (at 172.72 50.1641 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "ddr_vtt_leds.kicad_sch" (id 1) (at 172.72 113.5389 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+)

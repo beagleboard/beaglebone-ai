@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "beaglebone-ai")(type "KiCad")(uri "${KIPRJMOD}/beaglebone-ai.pretty")(options "")(descr ""))
-)

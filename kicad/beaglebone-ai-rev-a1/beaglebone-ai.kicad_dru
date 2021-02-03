@@ -1,0 +1,6 @@
+(version 1)
+(rule "MMC Neckdown"
+	(constraint track_width (min 3.2mil))
+	(constraint clearance (min 3.2mil))
+	(condition "A.insideArea('MMC_neckdown_area')" )
+)

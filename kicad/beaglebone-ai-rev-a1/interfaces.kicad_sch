@@ -1,0 +1,39 @@
+(kicad_sch (version 20210126) (generator eeschema)
+
+  (paper "A4")
+
+  (title_block
+    (title "BeagleBone AI AM57x")
+    (date "2021-01-15")
+    (rev "Kicad-A1")
+    (company "KiCad Services Corporation")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 68.58 55.88) (size 34.29 66.04)
+    (stroke (width 0.001) (type solid) (color 132 0 132 1))
+    (fill (color 255 255 255 0.0000))
+    (uuid c43c7a62-c9b5-4ce7-a41d-6babd3064f8f)
+    (property "Sheet name" "AM572x Interface 1" (id 0) (at 68.58 55.2441 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "interface1.kicad_sch" (id 1) (at 68.58 122.4289 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 113.03 55.88) (size 30.48 66.04)
+    (stroke (width 0.001) (type solid) (color 132 0 132 1))
+    (fill (color 255 255 255 0.0000))
+    (uuid 47bb86e1-7cce-4be6-b347-ecd35e529ecd)
+    (property "Sheet name" "AM572x Interface 2" (id 0) (at 113.03 55.2441 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "interface2.kicad_sch" (id 1) (at 113.03 122.4289 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+)

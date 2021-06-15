@@ -1,0 +1,13 @@
+(footprint "TP30" (version 20210126) (generator pcbnew) (layer "F.Cu")
+  (tedit 0)
+  (fp_text reference "REF**" (at 0 0 -180) (layer "F.SilkS") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)))
+    (tstamp cdfe0553-00af-4ab6-852c-aadc6495fe45)
+  )
+  (fp_text value "NI" (at 0 0 -180) (layer "F.SilkS") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)))
+    (tstamp 63047120-2105-4b80-9626-80208a6763cd)
+  )
+  (fp_line (start 0 0.4572) (end 0.0254 0.4572) (layer "F.Fab") (width 0.1) (tstamp f46ab50a-19e3-47e7-b48e-5cb11b5ecc63))
+  (pad "1" smd circle (at 0 0) (size 0.762 0.762) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp f24ef099-f968-4c50-a7f4-b77f4d603f65))
+)

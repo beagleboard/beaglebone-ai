@@ -1,0 +1,16 @@
+(footprint "MTGH200C125D_PL" (version 20210126) (generator pcbnew) (layer "F.Cu")
+  (tedit 0)
+  (fp_text reference "REF**" (at 0 0) (layer "F.SilkS") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)))
+    (tstamp 71d7692b-a474-4774-8262-0a95a649eb46)
+  )
+  (fp_text value "NI" (at 0 0) (layer "F.SilkS") hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)))
+    (tstamp 65c146f2-4dfd-46d5-b054-1026e1c6a670)
+  )
+  (fp_line (start -2.5908 2.794) (end 2.794 2.794) (layer "F.CrtYd") (width 0.05) (tstamp 170f4607-9772-4ab9-b660-d0b76620013b))
+  (fp_line (start 2.794 -2.4638) (end -2.5908 -2.4638) (layer "F.CrtYd") (width 0.05) (tstamp 55c934a7-81e6-4945-bc66-7a40b077be9f))
+  (fp_line (start 2.794 2.794) (end 2.794 -2.4638) (layer "F.CrtYd") (width 0.05) (tstamp 5cd92804-2a72-4bda-a91c-8e4dd2b51796))
+  (fp_line (start -2.5908 -2.4638) (end -2.5908 2.794) (layer "F.CrtYd") (width 0.05) (tstamp ae683fe5-f5cc-4e70-b003-d02f32d2296a))
+  (pad "1" thru_hole circle (at 0 0) (size 4.445 4.445) (drill oval 3.175 2.38125) (layers *.Cu *.Mask) (tstamp d6f88559-ed3b-4367-9aee-606e30437786))
+)
